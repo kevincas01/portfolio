@@ -203,7 +203,7 @@
     
 }
 
-@media screen  and (min-height:1366px) and (min-width:768px){
+@media screen and (min-height:1366px) and (min-width:768px){
     
     .profile-headshot #photo{
         width: 400px;
@@ -244,6 +244,11 @@
     .hidden-content{
         top:30%;
         width: 100%;
+    }
+
+    .profile{
+        height: calc(95vh - var(--navbar-height) - var(--view-more-height));
+    
     }
 }
 
