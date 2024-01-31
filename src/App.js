@@ -4,6 +4,9 @@ import { useEffect, useState,useRef} from 'react';
 import About from './Components/About';
 import Experience from './Components/Experience';
 import Projects from './Components/Projects';
+import Navbar from './Components/Navbar';
+import Contact from './Components/Contact';
+import Profile from './Components/Profile';
 
 
 function App() {
@@ -14,9 +17,9 @@ function App() {
   
 
   const name="Kevin Castro"
-  const title="Hello World, I'm"
+  const title="Hello World, my name is"
 
-  const educationRef = useRef(null);
+  const aboutRef = useRef(null);
   const experienceRef = useRef(null);
   const projectsRef = useRef(null)
   
@@ -35,7 +38,7 @@ function App() {
           setHeaderName(name.substring(0, j));
           j++;
 
-          if (j > name.length) {
+          if (j > name.length+5) {
             clearInterval(nameIntervalId);
             setHeaderDescription("show")
           }
@@ -61,71 +64,15 @@ function App() {
 
   return (
     <div className="App">
-      <div className="navbar">
-        <div className="nav-name">
-          
-          <span>Kevin C</span>
-        </div>
-        <div className='hamburger'>=</div>
-        <div className="nav-links">
-          
-          <span className="nav-item"
-          onClick={() => educationRef.current.scrollIntoView({  behavior: 'smooth',
-          block: 'start',
-          blockOffset: 50,
-          inline: 'nearest', })}
-          >Education</span>
-          <span className="nav-item"
-          onClick={() => experienceRef.current.scrollIntoView({  behavior: 'smooth',
-          block: 'start',
-          blockOffset: 50,
-          inline: 'nearest',})}
-          >Experience</span>
-          <span className="nav-item"
-          onClick={() => projectsRef.current.scrollIntoView({  behavior: 'smooth',
-          block: 'start',
-          blockOffset: 5000,
-          inline: 'nearest',})}
-          >Projects</span>
-          <span className="nav-item"
-          onClick={() => projectsRef.current.scrollIntoView({  behavior: 'smooth',
-          block: 'start',
-          blockOffset: 5000,
-          inline: 'nearest',})}
-          >Contact</span>
-        </div>
+      <Navbar aboutRef={aboutRef} experienceRef={experienceRef} projectsRef={projectsRef}/>
 
-      </div>
-
-      <div className='profile'>
-        <div className='profile-headshot'>
-
-        <img src='/images/KevinC.jpeg' alt='Kevin Castro Headshot' id='photo'></img>
-
-        </div>
-        <div className="profile-content">
-        <h3>{headerTitle} </h3>
-        <h1><span className='profile-name'>{headerName}</span></h1>
-        {showHeader&& (
-          <div className="hidden-content">
-
-          <p>A passionate and eager software developer</p>
-          
-          <div className="profile-buttons">
-          <button> Open Resume</button>
-          <button> Contact</button>
-          </div>
-            </div>
-
-          )}
-        </div>
-       
-
-      </div>
+      
       <div>
-        <About ref={educationRef} />
+        <Profile aboutRef={aboutRef} />
+        <About ref={aboutRef} />
         <Experience ref={experienceRef} />
         <Projects ref={projectsRef} />
+        <Contact/>
       </div>
 
         <button onClick={scrollToTop}>Back to the top</button>

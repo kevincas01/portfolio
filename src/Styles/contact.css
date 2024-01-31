@@ -1,0 +1,50 @@
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    width: 50%;
+    margin: auto;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+
+.contact-input{
+    display: flex;
+    flex-direction: column;
+    gap:5px
+}
+label{
+    width: fit-content;
+    font-weight: bold;
+    color:cyan;
+}
+input, textarea{
+    all:unset;
+
+    border:1px solid rgb(93, 93, 93);
+    border-radius: 10px;
+
+    color:white;
+    text-align: left;
+    padding:10px;
+    
+}
+input::placeholder {
+    text-align: left;
+}
+
+textarea{
+    min-height: 100px;
+}
+
+@media screen  and (max-width:800px){
+    .contact-container{
+    
+        width: 75%;
+    }
+}

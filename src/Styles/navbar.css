@@ -1,0 +1,72 @@
+.hamburger{
+    display: none;
+}
+  
+.navbar {
+    height: var(--navbar-height);
+    position: sticky;
+    top: 0;
+    color: white;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar.scrolled {
+    z-index: 10;
+    background-color: rgb(42, 41, 41);
+    border-bottom: 1px solid black;
+    color:cyan;
+
+    animation: scrollFadeIn 0.5s ease;
+}
+
+@keyframes scrollFadeIn {
+    from {
+      background-color: transparent;
+      color:white;
+      border-bottom: none;
+    }
+    to {
+  
+      background-color: rgb(42, 41, 41);
+      border-bottom: 1px solid black;
+      color:cyan;
+    }
+}
+
+
+
+.nav-links{
+    display: flex;
+    gap: 3rem;
+    font-size: 1.5rem;
+
+}
+
+.nav-name{
+    font-size: 1.5rem;
+}
+
+.nav-item:hover{
+    color:aqua;
+    text-decoration: underline;
+    cursor: pointer;
+    text-underline-offset: .75rem;
+
+}
+
+@media screen  and (max-width:800px){
+
+    .hamburger{
+        display: block;
+        position: absolute;
+        right: 10px;
+        font-size:30px;
+    }
+
+    .nav-links{
+        display: none;
+    }
+}

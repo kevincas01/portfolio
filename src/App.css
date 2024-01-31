@@ -1,217 +1,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
+:root {
+  --main-color: cyan;
+  --secondary-color: white;
+
+  --main-background-color: rgb(42, 41, 41);
+  --secondary-background-color: rgb(161, 161, 161);
+  --navbar-height: 70px;
+  --view-more-height: 50px;
+
+}
+
 *{
   margin: 0;
   padding: 0;
+  
 }
 
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  --navbar-height: 50px;
+  
+  color:white;
+  background-color: var(--main-background-color);
+
 }
 
 /* Navbar */
 
-.hamburger{
-  display: none;
-}
-
-.navbar {
-  height: var(--navbar-height);
-  position: sticky;
-  top: 0;
-  background-color: black;
-  color: white;
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.nav-links{
-  display: flex;
-  gap: 3rem;
-  font-size: 1rem;
-  
-}
-
-.nav-name{
-  font-size: 1.5rem;
-}
-
-.nav-item:hover{
-  color:aqua;
-  text-decoration: underline;
-  cursor: pointer;
-  text-underline-offset: .75rem;
-  
-}
-
-.profile{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: cyan;
-  min-height: fit-content;
-  height:calc(100vh - 70px);
-  gap:2rem;
-}
-
-@media screen  and (max-width:800px){
-  .profile{
-    flex-direction: column;
-    
-    justify-content: space-around; 
-    padding: 0;
-    margin:0;
-    gap:0;
-    height:65vh
-  }
-
-  .profile-headshot #photo{
-    height:65vw;
-    width:65vw;
-  }
-  
-  .hamburger{
-    display: block;
-    position: absolute;
-    right: 10px;
-
-  }
-
-  .nav-links{
-    display: none;
-  }
-
-  .profile-content{
-   
-    margin-bottom: 10px;
-    
-  }
-
-}
-.profile-content{
-  display: flex;
-  flex-direction: column;
-  
-  margin: 0 0 10px  0;
-  width:360px;
-}
-
-.profile-headshot {
-  display: flex;
-  margin: 10px 0px;
-}
-
-#photo{
-  border-radius: 50%;
-  height:30vw;
-  width:30vw;
-}
-
-.profile-buttons{
-  display: flex;
-  justify-content: center;
-  gap:2rem;
-  margin:0;
-  
-}
-
-.hidden-content{
-  animation: fadeIn 2s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
 
-button{
-  all:unset;
-  border: 1px black solid;
-  border-radius: 10px;
-  padding: 5px;
-  cursor: pointer;
 
-}
 
-button:hover{
-  background-color: black;
-  color:white;
-}
 
-h1,h3{
-  color: black;
-  margin: 0px;
-  
-}
-
-h1{
-  font-size: 3rem;
+.special-word{
+  color: cyan;
 }
 
 p{
-  color:black;
+  
   font-weight: normal;
   margin: 0;
   font-size: 1.75rem;
 }
 
-.name{
-  font-weight: bolder;
-  font-size: 50px;
+
+button{
+  all:unset;
+  border: 1px cyan solid;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+  
+
 }
+
+button:hover{
+  background-color: cyan;
+  color:rgb(42, 41, 41);;
+}
+
+
 
 
 /* Scroll behavior */
 
-.education{
+.about{
   scroll-margin-top: var(--navbar-height);
-  padding-top: 25px;
+  
 }
 .projects{
   scroll-margin-top: var(--navbar-height);
-  padding-top: 25px;
+  
 }
 .experience{
   scroll-margin-top: var(--navbar-height);
-  padding-top: 25px;
+  
 }
+
 .App {
   text-align: center;
   margin: 0px;
   padding: 0px;
 }
-
-
-/* 
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-*/

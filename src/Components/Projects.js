@@ -6,7 +6,7 @@ const Projects = React.forwardRef((props, ref) => {
         
 
 
-        <div>Projects</div>
+        <div><h1>PROJECTS</h1></div>
         <div>Projects</div>
         <div>Projects</div>
         <div>Projects</div>
