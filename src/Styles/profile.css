@@ -4,6 +4,7 @@
     
     justify-content: space-around;
     align-items: center;
+    text-align: center;
   }
   
   .profile-content{
@@ -16,6 +17,9 @@
     position: relative;
   }
 
+ h1.profile-name::after{
+  all:unset
+}
 
 .profile-headshot {
     display: flex;
@@ -34,6 +38,8 @@
 .profile-name{
     z-index: 5;
     position: absolute;
+
+    padding: 0;
     top:30%;
     left: 50%;
     width: 500px;

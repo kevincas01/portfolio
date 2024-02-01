@@ -5,7 +5,7 @@
   --secondary-color: white;
 
   --main-background-color: rgb(42, 41, 41);
-  --secondary-background-color: rgb(161, 161, 161);
+  --secondary-background-color: rgb(62, 62, 62);
   --navbar-height: 70px;
   --view-more-height: 50px;
 
@@ -29,10 +29,6 @@ body {
 /* Navbar */
 
 
-
-
-
-
 .special-word{
   color: cyan;
 }
@@ -43,7 +39,6 @@ p{
   margin: 0;
   font-size: 1.75rem;
 }
-
 
 button{
   all:unset;
@@ -59,9 +54,6 @@ button:hover{
   background-color: cyan;
   color:rgb(42, 41, 41);;
 }
-
-
-
 
 /* Scroll behavior */
 
@@ -79,7 +71,29 @@ button:hover{
 }
 
 .App {
-  text-align: center;
   margin: 0px;
   padding: 0px;
+}
+
+
+
+.scroll-top-button{
+  margin: 20px 0px;
+}
+
+h1 {
+  padding: 25px;
+  position: relative;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom:20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc( 50px); /* Make the underline wider by 50 pixels */
+  height: 5px; /* Set the height of the underline */
+  background-color: cyan; /* Set the color of the underline */
+  border-radius: 5px;
 }
