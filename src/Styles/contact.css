@@ -6,6 +6,15 @@
     margin: auto;
 }
 
+.contact-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-header p{
+    font-size: 15px;
+}
 .contact-form{
     display: flex;
     flex-direction: column;
@@ -39,7 +48,12 @@ input::placeholder {
 }
 
 textarea{
-    min-height: 100px;
+    min-height: 150px;
+}
+
+
+form button{
+    width: 50%;
 }
 
 @media screen  and (max-width:800px){
