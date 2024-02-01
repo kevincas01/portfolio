@@ -21,7 +21,9 @@ function App() {
 
   const aboutRef = useRef(null);
   const experienceRef = useRef(null);
-  const projectsRef = useRef(null)
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+
   
 
   useEffect(() => {
@@ -64,7 +66,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar aboutRef={aboutRef} experienceRef={experienceRef} projectsRef={projectsRef}/>
+      <Navbar aboutRef={aboutRef} experienceRef={experienceRef} projectsRef={projectsRef} contactRef={contactRef}/>
 
       
       <div>
@@ -72,10 +74,19 @@ function App() {
         <About ref={aboutRef} />
         <Experience ref={experienceRef} />
         <Projects ref={projectsRef} />
-        <Contact/>
+        <Contact ref={contactRef} />
       </div>
 
-        <button onClick={scrollToTop}>Back to the top</button>
+        <button className="scroll-top-button"onClick={scrollToTop}>Back to the top</button>
+
+        <hr></hr>
+
+      <div className=''>
+        Github
+        Linkedin
+
+      </div>
+    
     </div>
     
   );
