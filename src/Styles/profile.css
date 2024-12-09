@@ -33,9 +33,10 @@
     width: 500px;
     transform: translateX(-50%);
     font-size: 1.5rem;
-    color: cyan;
+   
 }
 .profile-name{
+  color: cyan;
     z-index: 5;
     position: absolute;
 
