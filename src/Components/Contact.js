@@ -1,86 +1,75 @@
-import React from 'react'
-import '../Styles/contact.css'
+import React from "react";
+import "../Styles/contact.css";
 
-const Contact = React.forwardRef((props, ref) => {
-  
+const Contact = (props, ref) => {
+  const form = React.useRef();
 
-    const form = React.useRef();
-
-    const sendEmail = (e) => {
-        e.preventDefault();
-        const formData = new FormData(form.current);
+  const sendEmail = (e) => {
+    e.preventDefault();
+    const formData = new FormData(form.current);
 
     // Accessing individual form fields by name
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const subject = formData.get('subject');
-    const message = formData.get('message');
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const subject = formData.get("subject");
+    const message = formData.get("message");
 
-    // Logging form field values
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Subject:', subject);
-    console.log('Message:', message);
-    form.current.reset()
-    }
-    
-    //     emailjs.sendForm('service_mm6wisb', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-    //       .then((result) => {
-    //           console.log(result.text);
-    //       }, (error) => {
-    //           console.log(error.text);
-    //       });
-    //   };
-    
+    form.current.reset();
+  };
 
-    return (
-    <div className='contact-container' ref={ref}>
+  //     emailjs.sendForm('service_mm6wisb', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+  //       .then((result) => {
+  //           console.log(result.text);
+  //       }, (error) => {
+  //           console.log(error.text);
+  //       });
+  //   };
 
-
-        <div className='contact-header'>
-
+  return (
+    <>
+      <div className="contact-header">
         <h1>Contact</h1>
         <p>Feel free to reach out!</p>
+      </div>
+
+      <form className="contact-form" ref={form} onSubmit={sendEmail}>
+        <div className="contact-input">
+          <label>Name</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
         </div>
 
-        <form className='contact-form' ref={form} onSubmit={sendEmail}>
-
-        <div className='contact-input'>
-            <label>Name</label>
-            <input type="text" name="name" placeholder='Enter your name' required/>
-
+        <div className="contact-input">
+          <label>Email</label>
+          <input
+            type="text"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div className="contact-input">
+          <label>Subject (Optional)</label>
+          <input type="text" placeholder="Subject" name="subject" />
         </div>
 
-        
-
-        <div className='contact-input'>
-            <label>Email</label>
-            <input type="text" name="email" placeholder='Enter your email' required/>
-
-        </div>
-        <div className='contact-input'>
-            <label>Subject (Optional)</label>
-            <input type="text" placeholder='Subject' name="subject" />
-
+        <div className="contact-input">
+          <label>Message</label>
+          <textarea
+            name="message"
+            placeholder="Enter your message"
+            required
+          ></textarea>
         </div>
 
-        <div className='contact-input'>
-            <label>Message</label>
-            <textarea name="message" placeholder="Enter your message"required>
+        <button type="submit">Send Message</button>
+      </form>
+    </>
+  );
+};
 
-            </textarea>
-
-        </div>
-
-        <button type='submit'>Send Message</button>
-
-        </form>
-        
-
-       
-    </div>
-  )
-}
-)
-
-export default Contact
+export default Contact;
