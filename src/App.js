@@ -1,94 +1,112 @@
-
-import './App.css';
-import { useEffect, useState,useRef} from 'react';
-import About from './Components/About';
-import Experience from './Components/Experience';
-import Projects from './Components/Projects';
-import Navbar from './Components/Navbar';
-import Contact from './Components/Contact';
-import Profile from './Components/Profile';
-
-
+import "./App.css";
+import { useEffect, useState, useRef } from "react";
+import About from "./Components/About";
+import Experience from "./Components/Experience";
+import Projects from "./Components/Projects";
+import Navbar from "./Components/Navbar";
+import Contact from "./Components/Contact";
+import Profile from "./Components/Profile";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 function App() {
-
-  const [headerTitle, setHeaderTitle]= useState("")
-  const [headerName,setHeaderName]=useState("")
-  const [showHeader,setHeaderDescription]=useState("")
-  
-
-  const name="Kevin Castro"
-  const title="Hello World, my name is"
-
+  const profileRef = useRef(null);
   const aboutRef = useRef(null);
   const experienceRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
-  
+  const navbarRefs = [aboutRef, experienceRef, projectsRef, contactRef];
+
+  const navbarHomeElements = [
+    ,
+    {
+      text: "About",
+      value: "about",
+      element: <About />,
+      ref: aboutRef,
+    },
+    {
+      text: "Experience",
+      value: "experience",
+      element: <Experience />,
+      ref: experienceRef,
+    },
+    {
+      text: "Projects",
+      value: "projects",
+      element: <Projects />,
+      ref: projectsRef,
+    },
+    {
+      text: "Contact",
+      value: "contact",
+      element: <Contact />,
+      ref: contactRef,
+    },
+  ];
+  const [activeElement, setActiveElement] = useState("");
 
   useEffect(() => {
-    let i = 0;
-    const intervalId = setInterval(() => {
-      setHeaderTitle(title.substring(0, i));
-      i++;
+    const handleScroll = () => {
+      const windowYScroll = window.scrollY;
 
-      if (i > title.length) {
-        clearInterval(intervalId);
+      const viewportHeight = window.innerHeight;
 
-        let j = 0;
-        const nameIntervalId = setInterval(() => {
-          setHeaderName(name.substring(0, j));
-          j++;
+      navbarRefs.forEach((elementRef) => {
+        if (elementRef.current) {
+          const rect = elementRef.current.getBoundingClientRect();
 
-          if (j > name.length+5) {
-            clearInterval(nameIntervalId);
-            setHeaderDescription("show")
+          const topHeight = rect.top + windowYScroll;
+          const bottomHeight = rect.bottom + windowYScroll;
+
+          if (
+            windowYScroll + viewportHeight > topHeight &&
+            windowYScroll < bottomHeight
+          ) {
+            setActiveElement(elementRef.current.dataset.element);
           }
-        }, 75);
-        
-      }
-    }, 50); // Change the interval duration (in milliseconds) as needed
+        }
+      });
+    };
 
-    
-      return () => {
-        clearInterval(intervalId); // Cleanup on component unmount
-       
-      };
+    window.addEventListener("scroll", handleScroll);
 
-  }, [title,name]);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth', // For smooth scrolling
+      behavior: "smooth", // For smooth scrolling
     });
   };
 
   return (
     <div className="App">
-      <Navbar aboutRef={aboutRef} experienceRef={experienceRef} projectsRef={projectsRef} contactRef={contactRef}/>
+      <Navbar
+        navbarHomeElements={navbarHomeElements}
+        activeElement={activeElement}
+      />
 
-      
-      <div>
-        <Profile aboutRef={aboutRef} />
-        <About ref={aboutRef} />
-        <Experience ref={experienceRef} />
-        <Projects ref={projectsRef} />
-        <Contact ref={contactRef} />
+      <div ref={profileRef}>
+        <Profile />
+        {navbarHomeElements.map((element, index) => (
+          <div
+            key={index}
+            className={element.value}
+            ref={element.ref}
+            data-element={element.value}
+          >
+            {element.element}
+          </div>
+        ))}
       </div>
 
-        <button className="scroll-top-button"onClick={scrollToTop}>Back to the top</button>
-
-        <hr></hr>
-
-      <div className=''>
-        Github
-        Linkedin
-
+      <div onClick={scrollToTop} style={{ textAlign:"center" }}>
+        <KeyboardArrowUpIcon  style={{ fontSize:"70px" }} />
       </div>
-    
     </div>
-    
   );
 }
 

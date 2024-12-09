@@ -4,8 +4,10 @@
   --main-color: cyan;
   --secondary-color: white;
 
-  --main-background-color: rgb(42, 41, 41);
-  --secondary-background-color: rgb(62, 62, 62);
+  --main-background-color: rgb(15 23 42);
+
+  --secondary-background-color: rgba(0,255,255,.1);
+  /* --secondary-background-color: rgb(62, 62, 62); */
   --navbar-height: 70px;
   --view-more-height: 50px;
 
@@ -14,7 +16,6 @@
 *{
   margin: 0;
   padding: 0;
-  
 }
 
 body {
@@ -34,7 +35,7 @@ body {
 }
 
 p{
-  
+  color:rgb(148 163 184);
   font-weight: normal;
   margin: 0;
   font-size: 1rem;
@@ -96,4 +97,10 @@ h1::after {
   height: 5px; /* Set the height of the underline */
   background-color: cyan; /* Set the color of the underline */
   border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+ p{
+  font-size: 14px;
+ }
 }
