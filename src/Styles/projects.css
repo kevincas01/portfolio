@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding: 0px 20px;
+
 }
 .project-header {
   display: flex;
@@ -22,6 +23,7 @@
 .project-skills {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .project-content {
   display: flex;

@@ -4,6 +4,8 @@
     gap:20px;
     width: 50%;
     margin: auto;
+    padding: 0px 20px;
+    box-sizing: border-box;
 }
 
 .contact-header{
@@ -56,9 +58,8 @@ form button{
     width: 50%;
 }
 
-@media screen  and (max-width:800px){
-    .contact-container{
-    
-        width: 75%;
+@media screen and (max-width: 768px) {
+    .contact{
+     width: 100%;
     }
-}
+   }
