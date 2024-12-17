@@ -49,7 +49,7 @@ const Experience = (props) => {
             </div>
             <div className="experience-content">
               <h3>
-                {experience.role} ~ {experience.company && experience.company}
+                {experience.role} {experience.company && (" ~ "+experience.company)}
               </h3>
               <p>{experience.description}</p>
               <div className="experience-skills">
