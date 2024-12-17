@@ -55,8 +55,15 @@ const Profile = () => {
               </p>
 
               <div className="profile-buttons">
-                <button className="profile-button"> Resume</button>
-                <button className="profile-button"> Contact</button>
+                <button
+                  className="profile-button"
+                  onClick={() =>
+                    window.open("/resume.pdf", "_blank", "noopener,noreferrer")
+                  }
+                >
+                  View Resume
+                </button>
+
               </div>
             </div>
           )}
