@@ -1,4 +1,5 @@
 import React from "react";
+import emailjs from "@emailjs/browser";
 import "../Styles/contact.css";
 
 const Contact = (props, ref) => {
@@ -6,24 +7,28 @@ const Contact = (props, ref) => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    const formData = new FormData(form.current);
 
-    // Accessing individual form fields by name
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const subject = formData.get("subject");
-    const message = formData.get("message");
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAIL_SERVICE_ID, // Use environment variable
+        process.env.REACT_APP_EMAIL_TEMPLATE_ID, // Use environment variable
+        form.current, // Form reference
+        process.env.REACT_APP_EMAIL_PUBLIC_KEY // Use environment variable
+      )
+      .then(
+        (result) => {
+          console.log("Message sent:", result.text);
+          alert("Your message has been sent successfully!");
+        },
+        (error) => {
+          console.error("Failed to send message:", error.text);
+          alert("Failed to send message. Please try again later.");
+        }
+      );
 
+    // Reset form fields
     form.current.reset();
   };
-
-  //     emailjs.sendForm('service_mm6wisb', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-  //       .then((result) => {
-  //           console.log(result.text);
-  //       }, (error) => {
-  //           console.log(error.text);
-  //       });
-  //   };
 
   return (
     <>
@@ -37,7 +42,7 @@ const Contact = (props, ref) => {
           <label>Name</label>
           <input
             type="text"
-            name="name"
+            name="from_name"
             placeholder="Enter your name"
             required
           />
@@ -46,7 +51,7 @@ const Contact = (props, ref) => {
         <div className="contact-input">
           <label>Email</label>
           <input
-            type="text"
+            type="email"
             name="email"
             placeholder="Enter your email"
             required
