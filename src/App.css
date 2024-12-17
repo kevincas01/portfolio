@@ -6,7 +6,10 @@
 
   --main-background-color: rgb(15 23 42);
 
-  --secondary-background-color: rgba(0,255,255,.1);
+  --secondary-background-color: rgba(0, 255, 255, 0.1);
+  --solid-secondary-background-color: #0E2E3F;
+
+
   /* --secondary-background-color: rgb(62, 62, 62); */
   --navbar-height: 70px;
   --view-more-height: 50px;

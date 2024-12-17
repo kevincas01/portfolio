@@ -117,7 +117,6 @@
     position: fixed;
     top: calc(var(--navbar-height));
     color: aqua;
-    background-color: transparent;
     height: calc(100vh - var(--navbar-height));
     opacity: 0; /* Initially hide the content */
     animation: navFadeIn 1s linear forwards; /* Fade in animation */
@@ -165,11 +164,11 @@
   @keyframes fadeBarIn {
     from {
       height: 0%;
-      background-color: var(--secondary-background-color);
+      background-color: var(--solid-secondary-background-color);
     }
     to {
       height: 100%;
-      background-color: var(--secondary-background-color);
+      background-color: var(--solid-secondary-background-color);
     }
   }
 
