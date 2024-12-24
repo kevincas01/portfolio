@@ -7,7 +7,7 @@ const Experience = (props) => {
       startDate: "Sept 2024",
       role: "Freelance Software Developer",
       description: `Developing a full stack application using Next.js and Tyepscript, integrating a PostgreSQL database for efficient data management and storage. Implemented a menu-driven Point of Sale(POS) system with integrated secure paymenet processing via Stripe API, enabling seamless transactions, real-time inventory tracking, and operationial efficiency `,
-      skills: ["Next,js", "Typescript", "Javascript", "Stripe API"],
+      skills: ["Next,js", "Typescript", "React","HTML & CSS", "Stripe API"],
     },
     {
       startDate: "April 2024",
@@ -23,7 +23,7 @@ const Experience = (props) => {
       role: "Software Engineer Intern",
       company: "Mantula Solar",
       description: `Led an overhaul of an existing web application by replacing its legacy framework with React, ensuring a more responsive and interactive user experience. To optimize performance, I integrated TypeScript and compressed images, resulting in a 30% reduction in loading times, which enhanced the experience for prospective customers. Additionally, I developed an automated contact sheet system with real-time email distribution to designated company recipients. I also reviewed and resolved code issues submitted by other interns, contributing to the overall efficiency and quality of the project.`,
-      skills: ["Next,js", "Typescript", "EasyPost", "Stripe API"],
+      skills: ["Javascript", "HTML & CSS"],
     },
     {
       startDate: "Sept 2021",
@@ -32,7 +32,7 @@ const Experience = (props) => {
       company: "Princeton University Mcgraw Center",
       description: `As a tutor, I provided personalized, one-on-one assistance to help students better understand statistical concepts and coding fundamentals. 
       I also led group sessions for over 40 students, facilitating advanced coding exercises and promoting collaborative problem-solving. Through these interactions, I ensured that students gained a thorough understanding of statistical theory and its application in the social sciences.`,
-      skills: ["Next,js", "Typescript", "EasyPost", "Stripe API"],
+      skills: [],
     },
   ];
   return (
