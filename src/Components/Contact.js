@@ -71,7 +71,9 @@ const Contact = (props, ref) => {
           ></textarea>
         </div>
 
-        <button type="submit">Send Message</button>
+        <div className="contact-button">
+          <button type="submit">Send Message</button>
+        </div>
       </form>
     </>
   );

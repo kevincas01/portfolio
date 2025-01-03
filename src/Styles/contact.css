@@ -57,6 +57,9 @@ textarea{
 form button{
     width: 50%;
 }
+.contact-button{
+    text-align: center;
+}
 
 @media screen and (max-width: 768px) {
     .contact{
