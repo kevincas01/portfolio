@@ -43,7 +43,7 @@ const Experience = (props) => {
       <div className="experiences-container">
         {experienceList.map((experience, index) => (
           <div className="experience-component" key={index}>
-            <div>
+            <div className="experience-dates">
               {experience.startDate} -{" "}
               {experience.endDate ? experience.endDate : "Present"}
             </div>
