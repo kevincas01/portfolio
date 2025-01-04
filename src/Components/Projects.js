@@ -22,7 +22,7 @@ The core feature of Vibify is the Recommendations Page, where you can explore ne
     },
     {
       title: "Tigerfit",
-      description: `A Fullstack fitness web app designed specifically for Princeton University students to track their workouts, visualize progress, and promote healthy lifestyles on campus, attracting over 100 active users. The app included a suite of charting and graphing tools to provide in-depth analytics and visual insights into user data, such as weight and lifted weight, helping users track their fitness journeys more effectively. `,
+      description: `A Fullstack fitness web app designed specifically for Princeton University students to track their workouts, visualize progress, and promote healthy lifestyles on campus, attracting over 100 active users. The app included a suite of charting and graphing tools to provide in-depth analytics and visual insights into user data, such as weight and lifted weight, helping users track their fitness journeys more effectively.The app was published on TigerApps, a platform funded by Princeton's Undergraduate Student Government, showcasing innovative, student-built applications that enhance campus life.`,
       skills: ["Python", "Flask", "Javascript", "HTML", "CSS"],
     },
     {
