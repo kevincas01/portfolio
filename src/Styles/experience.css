@@ -37,7 +37,7 @@
   transition: all 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.experience-content:hover {
+.experience-content.hoverable:hover {
   background-color: var(--hover-background-color);
  
   cursor: pointer;
