@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../Styles/profile.css";
 const Profile = () => {
   const [headerTitle, setHeaderTitle] = React.useState("");
@@ -34,6 +34,47 @@ const Profile = () => {
     };
   }, [title, name]);
 
+  useEffect(() => {
+    if (headerName != name) return;
+    const spans = document.querySelectorAll(".hover-text span");
+    spans.forEach((span) => {
+      span.addEventListener("mouseenter", function () {
+        this.style.fontWeight = "700";
+        this.style.color = "rgb(255, 255, 255)";
+
+        const leftNeighbor = this.previousElementSibling;
+        const rightNeighbor = this.nextElementSibling;
+
+        if (leftNeighbor) {
+          leftNeighbor.style.fontWeight = "500";
+          leftNeighbor.style.color = "rgb(191,255,255)";
+        }
+        if (rightNeighbor) {
+          rightNeighbor.style.fontWeight = "500";
+          rightNeighbor.style.color = "rgb(191,255,255)";
+        }
+      });
+
+      span.addEventListener("mouseleave", function () {
+        this.style.fontWeight = "300";
+        this.style.color = "cyan";
+
+        const leftNeighbor = this.previousElementSibling;
+        const rightNeighbor = this.nextElementSibling;
+
+        if (leftNeighbor) {
+          leftNeighbor.style.fontWeight = "300";
+          leftNeighbor.style.color = "cyan";
+        }
+
+        if (rightNeighbor) {
+          rightNeighbor.style.fontWeight = "300";
+          rightNeighbor.style.color = "cyan";
+        }
+      });
+    });
+  }, [headerName]);
+
   return (
     <>
       <div className="profile">
@@ -46,7 +87,18 @@ const Profile = () => {
         </div>
         <div className="profile-content">
           <h3 className="profile-greeting">{headerTitle} </h3>
-          <h1 className="profile-name">{headerName}</h1>
+          <h1 className="profile-name hover-text">
+            {headerName.split("").map((child, idx) => (
+              <span
+                style={{
+                  transition: "0.35s font-weight, 0.35s color",
+                }}
+                key={idx}
+              >
+                {child}
+              </span>
+            ))}
+          </h1>
           {showHeader && (
             <div className="hidden-content">
               <p>
@@ -63,25 +115,11 @@ const Profile = () => {
                 >
                   View Resume
                 </button>
-
               </div>
             </div>
           )}
         </div>
       </div>
-      {/* <div
-        className="view-more"
-        onClick={() =>
-          aboutRef.current.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-            blockOffset: 70,
-            inline: "nearest",
-          })
-        }
-      >
-        View More
-      </div> */}
     </>
   );
 };
