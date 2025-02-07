@@ -1,78 +1,139 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
 
 :root {
   --main-color: cyan;
-  --secondary-color: white;
-
-  --main-background-color: rgb(15 23 42);
-
-  --secondary-background-color: rgba(0, 255, 255, 0.1);
-  --solid-secondary-background-color: #0E2E3F;
-
-  --hover-background-color:rgba(60, 72, 96, 0.179);
+  --hover-background-color: rgba(60, 72, 96, 0.179);
 
   /* --secondary-background-color: rgb(62, 62, 62); */
   --navbar-height: 70px;
   --view-more-height: 50px;
-
 }
 
-*{
+.App {
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+  background-image: url("/public/top-gradient.png");
+  background-repeat: no-repeat;
+}
+
+.dark-mode {
+  --main-text-color: white;
+  --secondary-color: white;
+  --main-background-color: black;
+  --secondary-background-color: rgba(0, 255, 255, 0.1);
+  --solid-secondary-background-color: #0e2e3f;
+}
+
+.light-mode {
+  --main-text-color: black;
+  --secondary-color: black;
+  --main-background-color: white;
+  --secondary-background-color: rgba(0, 255, 255, 0.1);
+  --solid-secondary-background-color: #e0e0e0;
+}
+
+* {
   margin: 0;
   padding: 0;
 }
 
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  
-  color:white;
-  background-color: var(--main-background-color);
-
+  font-family: "Poppins", sans-serif;
 }
 
+
+.switch-mode-container {
+  margin: 10px;
+  width: 40px;
+  height: 20px;
+  position: relative;
+  border-radius: 20px;
+  background-color: gray; /* Default background */
+  background-image: linear-gradient(
+    to right,
+    cyan 70%,
+    gray 20%
+  ); /* Initial gradient */
+  background-size: 0 100%; /* Start with no color on the left side */
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease 0.1s; /* Smooth transition with delay */
+}
+
+.switch-mode-container.active {
+  background-size: 100% 100%;
+}
+/* General checkbox styling */
+.settings-checkbox {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  appearance: none; /* Remove default styles */
+  -webkit-appearance: none; /* Cross-browser support */
+  width: 20px; /* Checkbox size */
+  height: 20px;
+  border-radius: 50%; /* Make the checkbox round */
+  background-color: white; /* Default background */
+  cursor: pointer;
+  left: 0px; /* Start position on the left */
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+  transition: left 0.5s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Checked state */
+.settings-checkbox:checked {
+  left: 50%;
+  background-color: white;
+  filter: brightness(2);
+}
+
+/* Hover state */
+.settings-checkbox:hover {
+  box-shadow: 0 0 8px black;
+}
+
+/* Focus state */
+.settings-checkbox:focus {
+  outline: none;
+  box-shadow: 0 0 8px black;
+}
 /* Navbar */
 
-
-.special-word{
+.special-word {
   color: cyan;
 }
 
-p{
-  color:rgb(148 163 184);
+p {
+  color: rgb(148 163 184);
   font-weight: normal;
   margin: 0;
   font-size: 1rem;
 }
 
-button{
-  all:unset;
+button {
+  all: unset;
   border: 1px cyan solid;
   border-radius: 10px;
   padding: 5px;
   cursor: pointer;
-  
-
 }
 
-button:hover{
+button:hover {
   background-color: cyan;
-  color:rgb(42, 41, 41);;
+  color: rgb(42, 41, 41);
 }
 
 /* Scroll behavior */
 
-.about{
+.about {
   scroll-margin-top: var(--navbar-height);
-  
 }
-.projects{
+.projects {
   scroll-margin-top: var(--navbar-height);
-  
 }
-.experience{
+.experience {
   scroll-margin-top: var(--navbar-height);
-  
 }
 
 .App {
@@ -80,9 +141,7 @@ button:hover{
   padding: 0px;
 }
 
-
-
-.scroll-top-button{
+.scroll-top-button {
   margin: 20px 0px;
 }
 
@@ -92,19 +151,19 @@ h1 {
 }
 
 h1::after {
-  content: '';
+  content: "";
   position: absolute;
-  bottom:20px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: calc( 50px); /* Make the underline wider by 50 pixels */
+  width: calc(50px); /* Make the underline wider by 50 pixels */
   height: 5px; /* Set the height of the underline */
   background-color: cyan; /* Set the color of the underline */
   border-radius: 5px;
 }
 
 @media screen and (max-width: 768px) {
- p{
-  font-size: 14px;
- }
+  p {
+    font-size: 14px;
+  }
 }
