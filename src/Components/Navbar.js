@@ -2,6 +2,7 @@ import React from "react";
 import "../Styles/navbar.css";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
+import GitHubIcon from "@mui/icons-material/GitHub";
 const Navbar = ({
   navbarHomeElements,
   activeElement,
@@ -67,38 +68,43 @@ const Navbar = ({
               {element.text}
             </span>
           ))}
-          <span
-            className={`switch-mode-container`}
-            onClick={toggleTheme}
-          >
-            <input
-              type="checkbox"
-              name="stepByStepMode"
-              checked={isDarkMode}
-              onChange={toggleTheme}
-              className="settings-checkbox"
+          <div className="navbar-group">
+            <GitHubIcon
+              onClick={() =>
+                window.open("https://github.com/kevincas01", "_blank")
+              }
             />
-            <LightModeIcon
-              fontSize="inherit"
-              sx={{
-                zIndex: 20,
-                color: "white",
-                opacity: isDarkMode ? 0.3 : 1,
-              }}
-            />
-            <DarkModeIcon
-              fontSize="inherit"
-              sx={{
-                zIndex: 20,
-                color: "black",
-                opacity: isDarkMode ? 1 : 0.3,
-              }}
-            />
-          </span>
+
+            <span className={`switch-mode-container`} onClick={toggleTheme}>
+              <input
+                type="checkbox"
+                name="stepByStepMode"
+                checked={isDarkMode}
+                onChange={toggleTheme}
+                className="settings-checkbox"
+              />
+              <LightModeIcon
+                fontSize="inherit"
+                sx={{
+                  zIndex: 20,
+                  color: "white",
+                  opacity: isDarkMode ? 0.3 : 1,
+                }}
+              />
+              <DarkModeIcon
+                fontSize="inherit"
+                sx={{
+                  zIndex: 20,
+                  color: "black",
+                  opacity: isDarkMode ? 1 : 0.3,
+                }}
+              />
+            </span>
+          </div>
         </div>
       </div>
 
-      <div className={`nav-bars ${isNavToggled ? "toggled" : ""}`}>
+      {/* <div className={`nav-bars ${isNavToggled ? "toggled" : ""}`}>
         {Array.from({ length: 12 }).map((_, index) => (
           <div
             key={index}
@@ -107,7 +113,7 @@ const Navbar = ({
             style={{ animationDelay: `${(index + 1) * 0.05}s` }}
           ></div>
         ))}
-      </div>
+      </div> */}
     </>
   );
 };
