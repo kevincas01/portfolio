@@ -18,7 +18,6 @@
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain;
-  --gray-text-color: #3d4663;
 
 }
 
@@ -31,6 +30,12 @@
   --solid-secondary-background-color: #0e2e3f;
   --main-gradient-secondary-color: rgb(191, 255, 255);
   --gray-text-color: #8490b5;
+
+  --box-shadow-lg:0px 62px 25px rgba(255, 255, 255, 0.01),
+  0px 35px 21px rgba(255, 255, 255, 0.05),
+  0px 16px 16px rgba(255, 255, 255, 0.1),
+  0px 4px 9px rgba(255, 255, 255, 0.12);
+ 
 }
 
 .light-mode {
@@ -45,11 +50,15 @@
   ); /* Softer background tint */
   --secondary-background-color: rgba(0, 255, 255, 0.15);
   --main-gradient-secondary-color: rgba(0, 60, 78, 0.767);
+  --gray-text-color: #3d4663;
+
+  --box-shadow-lg: 0px 62px 25px rgba(9, 11, 17, 0.01),
+  0px 35px 21px rgba(9, 11, 17, 0.05), 0px 16px 16px rgba(9, 11, 17, 0.1),
+  0px 4px 9px rgba(9, 11, 17, 0.12);
 }
 
 * {
   margin: 0;
-  padding: 0;
 }
 
 body {
@@ -145,10 +154,6 @@ button:hover {
   scroll-margin-top: var(--navbar-height);
 }
 
-.App {
-  margin: 0px;
-  padding: 0px;
-}
 
 .scroll-top-button {
   margin: 20px 0px;
