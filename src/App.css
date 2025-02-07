@@ -1,35 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
 
 :root {
-  --main-color: cyan;
   --hover-background-color: rgba(60, 72, 96, 0.179);
 
   /* --secondary-background-color: rgb(62, 62, 62); */
   --navbar-height: 70px;
   --view-more-height: 50px;
+
 }
+/* 3d4663 */
 
 .App {
   background-color: var(--main-background-color);
   color: var(--main-text-color);
-  background-image: url("/public/top-gradient.png");
+  background-image: 
+    url("/public/top-gradient.png");
   background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  --gray-text-color: #3d4663;
+
 }
 
 .dark-mode {
+
+  --main-color: cyan;
   --main-text-color: white;
-  --secondary-color: white;
   --main-background-color: black;
-  --secondary-background-color: rgba(0, 255, 255, 0.1);
+  --secondary-background-color: rgba(0, 255, 255, 0.25);
   --solid-secondary-background-color: #0e2e3f;
+  --main-gradient-secondary-color: rgb(191, 255, 255);
+  --gray-text-color: #8490b5;
 }
 
 .light-mode {
-  --main-text-color: black;
-  --secondary-color: black;
-  --main-background-color: white;
-  --secondary-background-color: rgba(0, 255, 255, 0.1);
-  --solid-secondary-background-color: #e0e0e0;
+  --main-color: #007b9e; /* A richer cyan tone for better visibility */
+  --main-text-color: #1a1a1a; /* Darker blackish text for better contrast */
+  --main-background-color: #fdfdfd; /* Off-white to reduce glare */
+  --secondary-background-color: rgba(
+    0,
+    123,
+    158,
+    0.1
+  ); /* Softer background tint */
+  --secondary-background-color: rgba(0, 255, 255, 0.15);
+  --main-gradient-secondary-color: rgba(0, 60, 78, 0.767);
 }
 
 * {
@@ -51,7 +66,7 @@ body {
   height: 30px;
   mix-blend-mode: difference;
   font-size: 16px;
-  cursor:pointer
+  cursor: pointer;
 }
 
 /* General checkbox styling */
@@ -95,11 +110,11 @@ body {
 /* Navbar */
 
 .special-word {
-  color: cyan;
+  color: var(--main-color);
 }
 
 p {
-  color: rgb(148 163 184);
+  color: var(--gray-text-color);
   font-weight: normal;
   margin: 0;
   font-size: 1rem;
@@ -107,14 +122,14 @@ p {
 
 button {
   all: unset;
-  border: 1px cyan solid;
+  border: 1px var(--main-color) solid;
   border-radius: 10px;
   padding: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: cyan;
+  background-color: var(--main-color);
   color: rgb(42, 41, 41);
 }
 
@@ -152,7 +167,7 @@ h1::after {
   transform: translateX(-50%);
   width: calc(50px); /* Make the underline wider by 50 pixels */
   height: 5px; /* Set the height of the underline */
-  background-color: cyan; /* Set the color of the underline */
+  background-color: var(--main-color); /* Set the color of the underline */
   border-radius: 5px;
 }
 

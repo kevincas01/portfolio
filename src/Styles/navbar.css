@@ -25,7 +25,7 @@
   }
   to {
     border-bottom: 1px solid black;
-    color: cyan;
+    color: var(--main-color);
   }
 }
 
@@ -40,13 +40,13 @@
 }
 
 .nav-item:hover {
-  color: aqua;
+  color: var(--main-color);;
   text-decoration: underline;
   cursor: pointer;
   text-underline-offset: 0.75rem;
 }
 .nav-item.active{
-  color: aqua;
+  color: var(--main-color);;
   text-decoration: underline;
   cursor: pointer;
   text-underline-offset: 0.75rem;
@@ -75,7 +75,7 @@
   .line {
     width: 100%; /* Adjust as needed */
     height: 2px; /* Thickness of the lines */
-    background-color: cyan; /* Color of the lines */
+    background-color: var(--main-color);; /* Color of the lines */
     transition: transform 0.5s ease;
   }
 
@@ -93,7 +93,7 @@
   .line {
     width: 100%; /* Adjust as needed */
     height: 2px; /* Thickness of the lines */
-    background-color: cyan; /* Color of the lines */
+    background-color: var(--main-color);; /* Color of the lines */
     transition: transform 0.5s ease;
   }
 
@@ -115,7 +115,7 @@
     justify-content: center;
     position: fixed;
     top: calc(var(--navbar-height));
-    color: aqua;
+    color: var(--main-color);;
     height: calc(100vh - var(--navbar-height));
     opacity: 0; /* Initially hide the content */
     animation: navFadeIn 1s linear forwards; /* Fade in animation */

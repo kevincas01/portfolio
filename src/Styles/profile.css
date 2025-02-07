@@ -34,7 +34,6 @@ h1.profile-name::after {
   font-size: 1.5rem;
 }
 .profile-name {
-  color: cyan;
   z-index: 5;
   position: absolute;
 
@@ -55,7 +54,7 @@ h1.profile-name::after {
   width: 75%;
   transform: translateX(-50%);
 
-  animation: fadeIn 3s ease;
+  animation: fadeIn 1s ease;
 }
 
 @keyframes fadeIn {
