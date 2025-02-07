@@ -81,12 +81,19 @@ function App() {
       behavior: "smooth", // For smooth scrolling
     });
   };
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
 
   return (
-    <div className="App">
+    <div className={`App ${isDarkMode ? "dark-mode" : "light-mode"}`}>
       <Navbar
         navbarHomeElements={navbarHomeElements}
         activeElement={activeElement}
+        isDarkMode={isDarkMode}
+        toggleTheme={toggleTheme}
       />
 
       <div ref={profileRef}>
@@ -103,8 +110,11 @@ function App() {
         ))}
       </div>
 
-      <div onClick={scrollToTop} style={{ textAlign:"center",marginTop:"25px",cursor:"pointer"}}>
-        <KeyboardArrowUpIcon  style={{ fontSize:"70px" }} />
+      <div
+        onClick={scrollToTop}
+        style={{ textAlign: "center", marginTop: "25px", cursor: "pointer" }}
+      >
+        <KeyboardArrowUpIcon style={{ fontSize: "70px" }} />
         <p>Back to top</p>
       </div>
     </div>
