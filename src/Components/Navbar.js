@@ -1,7 +1,12 @@
 import React from "react";
 import "../Styles/navbar.css";
 
-const Navbar = ({ navbarHomeElements, activeElement }) => {
+const Navbar = ({
+  navbarHomeElements,
+  activeElement,
+  isDarkMode,
+  toggleTheme,
+}) => {
   const [scrolled, setScrolled] = React.useState(false);
 
   const [isNavToggled, setIsNavToggled] = React.useState(false);
@@ -25,7 +30,7 @@ const Navbar = ({ navbarHomeElements, activeElement }) => {
         <div className="nav-name">
           <span
             className={`nav-item ${
-              activeElement === 'profile' ? "active" : ""
+              activeElement === "profile" ? "active" : ""
             }`}
             style={{ fontWeight: "bold" }}
           >
@@ -61,6 +66,19 @@ const Navbar = ({ navbarHomeElements, activeElement }) => {
               {element.text}
             </span>
           ))}
+          <span
+            className={`switch-mode-container ${
+              isDarkMode ? "active" : "inactive"
+            }`}
+          >
+            <input
+              type="checkbox"
+              name="stepByStepMode"
+              checked={isDarkMode}
+              onChange={toggleTheme}
+              className="settings-checkbox"
+            />
+          </span>
         </div>
       </div>
 
