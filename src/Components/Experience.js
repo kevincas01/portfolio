@@ -7,7 +7,7 @@ const Experience = (props) => {
       startDate: "Sept 2024",
       role: "Freelance Software Developer",
       description: `Developing a full stack application using Next.js and Tyepscript, integrating a PostgreSQL database for efficient data management and storage. Implemented a menu-driven Point of Sale(POS) system with integrated secure paymenet processing via Stripe API, enabling seamless transactions, real-time inventory tracking, and operationial efficiency `,
-      skills: ["Next,js", "Typescript", "React", "HTML & CSS", "Stripe API"],
+      skills: ["Next.js", "Typescript", "React", "HTML & CSS", "Stripe API"],
       url: "",
     },
     {
@@ -16,7 +16,7 @@ const Experience = (props) => {
       role: "Fullstack Software Engineer",
       company: "Bioverse",
       description: `I designed, architected, and implemented a robust tagging system for order management, streamlining the revision and tracking process for company personnel, which resulted in a 20% increase in the number of orders completed. Additionally, I translated over 50 Figma designs into fully responsive web pages, ensuring consistency with design specifications and enhancing the overall user experience. To further optimize operations, I developed automated scripts that tracked the status of products using the pharmacy and EasyPost APIs, improving efficiency and reducing manual oversight.`,
-      skills: ["Next,js", "Typescript", "EasyPost", "Stripe API"],
+      skills: ["Next.js", "Typescript", "EasyPost", "Stripe API"],
       url: "https://app.gobioverse.com/",
     },
     {
@@ -64,7 +64,7 @@ const Experience = (props) => {
             >
               <h3>
                 {experience.role}{" "}
-                {experience.company && " ~ " + experience.company}
+                {experience.company && " • " + experience.company}
               </h3>
               <p>{experience.description}</p>
               <div className="experience-skills">

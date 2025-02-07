@@ -13,7 +13,7 @@ The core feature of Vibify is the Recommendations Page, where you can explore ne
       title: "Vidload",
       description: `A video streaming application that allows users to upload, edit, and view videos. To support these features, I built a Node.js API server that facilitates video and image uploads to an AWS S3 bucket, transfers media via AWS CloudFront for fast delivery, and stores user data securely in a PostgreSQL database. 
       This architecture ensures smooth media handling and efficient data management for an optimized user experience.`,
-      skills: ["AWS S3 & Cloudfront","Typescript", "Next", "Next Auth", "Spotify API"],
+      skills: ["AWS S3 & Cloudfront","Typescript", "React", "Authentication"],
     },
     {
       title: "Unlimited",
