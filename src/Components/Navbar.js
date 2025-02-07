@@ -1,6 +1,7 @@
 import React from "react";
 import "../Styles/navbar.css";
-
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 const Navbar = ({
   navbarHomeElements,
   activeElement,
@@ -77,6 +78,22 @@ const Navbar = ({
               checked={isDarkMode}
               onChange={toggleTheme}
               className="settings-checkbox"
+            />
+            <LightModeIcon
+              fontSize="inherit"
+              sx={{
+                zIndex: 20,
+                color: "white",
+                opacity: isDarkMode ? 0.3 : 1,
+              }}
+            />
+            <DarkModeIcon
+              fontSize="inherit"
+              sx={{
+                zIndex: 20,
+                color: "black",
+                opacity: isDarkMode ? 1 : 0.3,
+              }}
             />
           </span>
         </div>
