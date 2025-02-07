@@ -68,9 +68,8 @@ const Navbar = ({
             </span>
           ))}
           <span
-            className={`switch-mode-container ${
-              isDarkMode ? "active" : "inactive"
-            }`}
+            className={`switch-mode-container`}
+            onClick={toggleTheme}
           >
             <input
               type="checkbox"

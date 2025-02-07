@@ -51,6 +51,7 @@ body {
   height: 30px;
   mix-blend-mode: difference;
   font-size: 16px;
+  cursor:pointer
 }
 
 /* General checkbox styling */
