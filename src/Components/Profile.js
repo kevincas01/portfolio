@@ -40,36 +40,36 @@ const Profile = () => {
     spans.forEach((span) => {
       span.addEventListener("mouseenter", function () {
         this.style.fontWeight = "700";
-        this.style.color = "rgb(255, 255, 255)";
+        this.style.color = "var(--main-text-color)";
 
         const leftNeighbor = this.previousElementSibling;
         const rightNeighbor = this.nextElementSibling;
 
         if (leftNeighbor) {
           leftNeighbor.style.fontWeight = "500";
-          leftNeighbor.style.color = "rgb(191,255,255)";
+          leftNeighbor.style.color = "var(--main-gradient-secondary-color)";
         }
         if (rightNeighbor) {
           rightNeighbor.style.fontWeight = "500";
-          rightNeighbor.style.color = "rgb(191,255,255)";
+          rightNeighbor.style.color = "var(--main-gradient-secondary-color)";
         }
       });
 
       span.addEventListener("mouseleave", function () {
         this.style.fontWeight = "300";
-        this.style.color = "cyan";
+        this.style.color = "var(--main-color)";
 
         const leftNeighbor = this.previousElementSibling;
         const rightNeighbor = this.nextElementSibling;
 
         if (leftNeighbor) {
           leftNeighbor.style.fontWeight = "300";
-          leftNeighbor.style.color = "cyan";
+          leftNeighbor.style.color = "var(--main-color)";
         }
 
         if (rightNeighbor) {
           rightNeighbor.style.fontWeight = "300";
-          rightNeighbor.style.color = "cyan";
+          rightNeighbor.style.color = "var(--main-color)";
         }
       });
     });
@@ -102,8 +102,7 @@ const Profile = () => {
           {showHeader && (
             <div className="hidden-content">
               <p>
-                A <span className="special-word">passionate </span> and{" "}
-                <span className="special-word">eager</span> software developer
+                Fullstack Software Developer
               </p>
 
               <div className="profile-buttons">
