@@ -76,7 +76,7 @@ const Profile = () => {
   }, [headerName]);
 
   return (
-    <>
+    <div className="profile-container">
       <div className="profile">
         <div className="profile-headshot">
           <img
@@ -101,9 +101,7 @@ const Profile = () => {
           </h1>
           {showHeader && (
             <div className="hidden-content">
-              <p>
-                Fullstack Software Developer
-              </p>
+              <p>Fullstack Software Developer</p>
 
               <div className="profile-buttons">
                 <button
@@ -119,7 +117,7 @@ const Profile = () => {
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
