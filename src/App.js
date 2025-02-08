@@ -8,7 +8,6 @@ import Contact from "./Components/Contact";
 import Profile from "./Components/Profile";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 function App() {
-  const profileRef = useRef(null);
   const aboutRef = useRef(null);
   const experienceRef = useRef(null);
   const projectsRef = useRef(null);
@@ -96,7 +95,7 @@ function App() {
         toggleTheme={toggleTheme}
       />
 
-      <div ref={profileRef}>
+      <div >
         <Profile />
         {navbarHomeElements.map((element, index) => (
           <div
