@@ -49,25 +49,29 @@ const Navbar = ({
           <span className="line"></span>
         </div>
 
-        <div className={`nav-links ${isNavToggled ? "nav-toggled" : ""}`}>
-          {navbarHomeElements.map((element) => (
-            <span
-              key={element.value}
-              className={`nav-item ${
-                activeElement === element.value ? "active" : ""
-              }`}
-              onClick={() => {
-                setIsNavToggled(false);
-                element.ref.current.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                  inline: "nearest",
-                });
-              }}
-            >
-              {element.text}
-            </span>
-          ))}
+        <div
+          className={`nav-tabs-container ${isNavToggled ? "nav-toggled" : ""}`}
+        >
+          <div className="nav-tabs">
+            {navbarHomeElements.map((element) => (
+              <span
+                key={element.value}
+                className={`nav-item ${
+                  activeElement === element.value ? "active" : ""
+                }`}
+                onClick={() => {
+                  setIsNavToggled(false);
+                  element.ref.current.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                    inline: "nearest",
+                  });
+                }}
+              >
+                {element.text}
+              </span>
+            ))}{" "}
+          </div>
           <div className="navbar-group">
             <GitHubIcon
               onClick={() =>
@@ -103,17 +107,6 @@ const Navbar = ({
           </div>
         </div>
       </div>
-
-      {/* <div className={`nav-bars ${isNavToggled ? "toggled" : ""}`}>
-        {Array.from({ length: 12 }).map((_, index) => (
-          <div
-            key={index}
-            className={`nav-bar ${isNavToggled ? "toggled" : "nontoggled"}`}
-            id={`${isNavToggled ? "toggled-" : "nontoggled-"}nav-bar-${index}`}
-            style={{ animationDelay: `${(index + 1) * 0.05}s` }}
-          ></div>
-        ))}
-      </div> */}
     </>
   );
 };
