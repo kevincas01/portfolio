@@ -74,6 +74,7 @@ const Navbar = ({
           </div>
           <div className="navbar-group">
             <GitHubIcon
+              sx={{ cursor: "pointer" }}
               onClick={() =>
                 window.open("https://github.com/kevincas01", "_blank")
               }
