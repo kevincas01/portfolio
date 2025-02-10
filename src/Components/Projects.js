@@ -1,6 +1,6 @@
 import React from "react";
 import "../Styles/projects.css";
-const Projects = (props) => {
+const Projects = () => {
   const projectsList = [
     {
       title: "Vibify - Spotify social media app",

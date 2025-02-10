@@ -2,7 +2,7 @@ import React from "react";
 import emailjs from "@emailjs/browser";
 import "../Styles/contact.css";
 
-const Contact = (props, ref) => {
+const Contact = () => {
   const form = React.useRef();
 
   const sendEmail = (e) => {

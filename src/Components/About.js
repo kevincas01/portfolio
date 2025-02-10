@@ -1,7 +1,7 @@
 import React from "react";
 import "../Styles/about.css";
 
-const About = (props) => {
+const About = () => {
   const skillsList = [
     "HTML",
     "CSS",

@@ -35,7 +35,7 @@ const Profile = () => {
   }, [title, name]);
 
   useEffect(() => {
-    if (headerName != name) return;
+    if (headerName !== name) return;
     const spans = document.querySelectorAll(".hover-text span");
     spans.forEach((span) => {
       span.addEventListener("mouseenter", function () {

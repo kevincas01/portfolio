@@ -95,7 +95,7 @@ function App() {
         toggleTheme={toggleTheme}
       />
 
-      <div >
+      <div>
         <Profile />
         {navbarHomeElements.map((element, index) => (
           <div

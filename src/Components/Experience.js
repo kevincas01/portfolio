@@ -1,7 +1,7 @@
 import React from "react";
 import "../Styles/experience.css";
 
-const Experience = (props) => {
+const Experience = () => {
   const experienceList = [
     {
       startDate: "Sept 2024",
