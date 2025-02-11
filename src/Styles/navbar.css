@@ -12,6 +12,7 @@
 .navbar.scrolled {
   z-index: 40;
   background-color: var(--main-background-color);
+  transition: all 0.5s;
 }
 
 .nav-tabs-container {
