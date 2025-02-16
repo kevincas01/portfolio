@@ -13,7 +13,7 @@ The core feature of Vibify is the Recommendations Page, where you can explore ne
       title: "Vidload",
       description: `A video streaming application that allows users to upload, edit, and view videos. To support these features, I built a Node.js API server that facilitates video and image uploads to an AWS S3 bucket, transfers media via AWS CloudFront for fast delivery, and stores user data securely in a PostgreSQL database. 
       This architecture ensures smooth media handling and efficient data management for an optimized user experience.`,
-      skills: ["AWS S3 & Cloudfront","Typescript", "React", "Authentication"],
+      skills: ["AWS S3 & Cloudfront", "Typescript", "React", "Authentication"],
     },
     {
       title: "Unlimited",
@@ -22,7 +22,7 @@ The core feature of Vibify is the Recommendations Page, where you can explore ne
     },
     {
       title: "Tigerfit",
-      description: `A Fullstack fitness web app designed specifically for Princeton University students to track their workouts, visualize progress, and promote healthy lifestyles on campus, attracting over 100 active users. The app included a suite of charting and graphing tools to provide in-depth analytics and visual insights into user data, such as weight and lifted weight, helping users track their fitness journeys more effectively.The app was published on TigerApps, a platform funded by Princeton's Undergraduate Student Government, showcasing innovative, student-built applications that enhance campus life.`,
+      description: `A Fullstack fitness web app designed specifically for Princeton University students to track their workouts, visualize progress, and promote healthy lifestyles on campus, attracting over 100 active users. The app included a suite of charting and graphing tools to provide in-depth analytics and visual insights into user data, such as weight and lifted weight. The app was published on TigerApps, a Princeton University platform showcasing innovative, student-built applications that enhance campus life.`,
       skills: ["Python", "Flask", "Javascript", "HTML", "CSS"],
     },
     {
@@ -33,24 +33,26 @@ The core feature of Vibify is the Recommendations Page, where you can explore ne
   ];
   return (
     <>
-      <div className="project-header">
+      <div className="projects-header">
         <h1>PROJECTS</h1>
       </div>
-      <div className="projects-container">
+
+      <div className="card-container">
         {projectsList.map((project, index) => (
-          <div className="project-component" key={index}>
+          <div className="project-card" key={index}>
             <div className="project-content">
               <h3>{project.title}</h3>
-              <p>{project.description}</p>
+              <div className="project-description">
+                <p>{project.description}</p>
+              </div>
               <div className="project-skills">
                 {project.skills.map((skill, index) => (
-                  <div className="skill" key={skill}>
+                  <div className="project-skill" key={skill}>
                     {skill}
                   </div>
                 ))}
               </div>
             </div>
-            <div></div>
           </div>
         ))}
       </div>

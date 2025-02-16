@@ -17,9 +17,10 @@
 
 .dark-mode {
   --main-color: cyan;
-  --main-text-color: white;
+  --main-text-color: #fdfdfd;
   --main-background-color: black;
   --secondary-background-color: rgba(0, 255, 255, 0.25);
+  --contrast-background-color: #090909;
   --solid-secondary-background-color: #0e2e3f;
   --main-gradient-secondary-color: rgb(191, 255, 255);
   --gray-text-color: #8490b5;
@@ -34,13 +35,8 @@
   --main-color: #007b9e; /* A richer cyan tone for better visibility */
   --main-text-color: #1a1a1a; /* Darker blackish text for better contrast */
   --main-background-color: #fdfdfd; /* Off-white to reduce glare */
-  --secondary-background-color: rgba(
-    0,
-    123,
-    158,
-    0.1
-  ); /* Softer background tint */
-  --secondary-background-color: rgba(0, 255, 255, 0.15);
+  --secondary-background-color: rgba(0, 124, 158, 0.15);
+  --contrast-background-color: #F5F5F5;
   --main-gradient-secondary-color: rgba(0, 60, 78, 0.767);
   --gray-text-color: #3d4663;
 

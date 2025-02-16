@@ -3,36 +3,58 @@
   flex-direction: column;
   align-items: center;
   padding: 0px 20px;
-
 }
-.project-header {
+.projects-header {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.project-component {
-  display: grid;
-  grid-template-columns: 4fr 1fr; 
-  gap: 10px; 
-}
-.projects-container {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
 }
 .project-skills {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  margin: auto;
+  width: 100%;
+  gap: 20px;
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  min-height: 200px; /* Adjust as needed */
+  border-radius: 10px;
+  background-color: var(--contrast-background-color);
+}
 .project-content {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  height: 100%;
+}
+.project-description{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.project-skill {
+  font-size: 14px;
+  color: var(--main-color);
+  background-color: var(--secondary-background-color);
+  border-radius: 20px;
+  padding: 5px 10px;
 }
 
 @media screen and (max-width: 768px) {
-  .project-component {
+
+  .card-container {
     grid-template-columns: 1fr;
   }
   .project-skills {
