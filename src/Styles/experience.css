@@ -38,7 +38,7 @@
 }
 
 .experience-content.hoverable:hover {
-  background-color: var(--hover-background-color);
+  background-color: var(--contrast-background-color);
  
   cursor: pointer;
 
