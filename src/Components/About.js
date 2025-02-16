@@ -29,6 +29,9 @@ const About = () => {
         <div className="about-info-text">
           <h2>Get to know me!</h2>
           <p>
+           I graduated from Princeton University with a Bachelors Degree in Computer Science.
+          </p>
+          <p>
             My experience in various software projects has allowed me to
             showcase my ability to create robust, scalable, and maintainable
             applications.
