@@ -4,6 +4,7 @@
   overscroll-behavior: none;
   --hover-background-color: rgba(60, 72, 96, 0.179);
   --navbar-height: 70px;
+  --max-width:1200px;
 }
 
 .App {
@@ -20,7 +21,7 @@
   --main-text-color: #fdfdfd;
   --main-background-color: black;
   --secondary-background-color: rgba(0, 255, 255, 0.25);
-  --contrast-background-color: #090909;
+  --contrast-background-color: #111111;
   --solid-secondary-background-color: #0e2e3f;
   --main-gradient-secondary-color: rgb(191, 255, 255);
   --gray-text-color: #8490b5;
@@ -36,7 +37,7 @@
   --main-text-color: #1a1a1a; /* Darker blackish text for better contrast */
   --main-background-color: #fdfdfd; /* Off-white to reduce glare */
   --secondary-background-color: rgba(0, 124, 158, 0.15);
-  --contrast-background-color: #F5F5F5;
+  --contrast-background-color: #F1F1F1;
   --main-gradient-secondary-color: rgba(0, 60, 78, 0.767);
   --gray-text-color: #3d4663;
 
@@ -78,7 +79,7 @@ body {
   border-radius: 20px;
   background-color: white;
   cursor: pointer;
-  border: 1px solid #0e2e3f;
+  border: 1px solid var(--main-text-color);
   transition: background-color 0.3s ease;
 }
 
