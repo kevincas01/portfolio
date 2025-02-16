@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center; /* Center horizontally */
-  padding: 0px 20px;
+  max-width: var(--max-width);
+  margin: auto;
 }
 .experience-header {
   display: flex;

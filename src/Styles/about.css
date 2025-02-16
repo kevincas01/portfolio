@@ -1,7 +1,7 @@
 .about {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center horizontally */
+  
+  padding: 0px 20px;
+  max-width: var(--max-width);
 }
 .about-header {
   display: flex;
@@ -11,19 +11,20 @@
 
 .about-info {
   display: grid;
+  min-width: 0;
   grid-template-columns: 1fr 1fr;
 
   grid-gap: 5rem;
-  justify-content: center;
+}
+.about-info-text{
+  min-width: 0;    
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-.about-info-text {
-  margin-left: 25px;
-}
-.about-info-text p {
-  margin-bottom: 15px;
-}
 .about-info-skills {
+  min-width:0;
   display: flex;
   flex-direction: column;
   align-items: center;
