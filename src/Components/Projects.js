@@ -1,11 +1,13 @@
 import React from "react";
 import "../Styles/projects.css";
+import ProjectCard from "./ProjectCard";
 const Projects = () => {
   const projectsList = [
     {
       title: "Vibify - Spotify social media app",
       description: `A full-stack web app that enhances your Spotify experience with personalized insights and social recommendations. Explore top artists, tracks, and recently played songs. The Recommendations Page lets you discover new music, share favorites, and seamlessly add them to your Spotify playlists.`,
       skills: ["Typescript", "Next", "Next Auth", "Spotify API"],
+      
     },
     {
       title: "Vidload",
@@ -16,6 +18,7 @@ const Projects = () => {
       title: "Unlimited",
       description: `A fully functional replica of the NYT Wordle and Connections games, enabling users to play unlimited games without the daily restriction. The application mirrors the core gameplay mechanics of the original games, offering users the same word puzzle challenges and variety, but with the added benefit of unlimited gameplay, making it accessible at any time.`,
       skills: ["React", "Javascript", "HTML", "CSS"],
+      imagePath:"/projects/unlimited1.png"
     },
     {
       title: "Tigerfit",
@@ -36,21 +39,7 @@ const Projects = () => {
 
       <div className="card-container">
         {projectsList.map((project, index) => (
-          <div className="project-card" key={index}>
-            <div className="project-content">
-              <h3>{project.title}</h3>
-              <div className="project-description">
-                <p>{project.description}</p>
-              </div>
-              <div className="project-skills">
-                {project.skills.map((skill, index) => (
-                  <div className="project-skill" key={skill}>
-                    {skill}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+         <ProjectCard project={project}/>
         ))}
       </div>
     </>
