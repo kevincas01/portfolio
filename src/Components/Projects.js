@@ -16,6 +16,7 @@ const Projects = () => {
       skills: ["React", "Javascript", "HTML", "CSS"],
       imagePath: "/projects/unlimited1.png",
       githubLink: "https://github.com/kevincas01/gamecenter-single-player",
+      siteLink:"https://gamecenter-single-player.vercel.app/"
     },
     {
       title: "Vidload",
