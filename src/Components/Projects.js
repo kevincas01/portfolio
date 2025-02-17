@@ -16,12 +16,13 @@ const Projects = () => {
       skills: ["React", "Javascript", "HTML", "CSS"],
       imagePath: "/projects/unlimited1.png",
       githubLink: "https://github.com/kevincas01/gamecenter-single-player",
-      siteLink:"https://gamecenter-single-player.vercel.app/"
+      siteLink: "https://gamecenter-single-player.vercel.app/",
     },
     {
       title: "Vidload",
       description: `A video streaming application that allows users to upload, edit, and view videos. To support these features, I built a Node.js API server that facilitates video and image uploads to an AWS S3 bucket, transfers media via AWS CloudFront for fast delivery, and stores user data securely in a PostgreSQL database.`,
       skills: ["AWS S3 & Cloudfront", "Typescript", "React", "Authentication"],
+      githubLink: "https://github.com/kevincas01/Video-Upload",
     },
     {
       title: "Tigerfit",
@@ -32,6 +33,7 @@ const Projects = () => {
       title: "Spaceship Trainer",
       description: `Developed and designed a 3D first person shooting game built with the Three.js 3D computer graphics framework.`,
       skills: ["Three.js", "HTML", "Javascript", "CSS"],
+      githubLink: "https://github.com/kevincas01/SpaceShipTrainer",
     },
   ];
   return (
