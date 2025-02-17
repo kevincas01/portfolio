@@ -39,6 +39,7 @@
   width: 100%;
   object-fit: contain;
   height: 250px;
+  margin-bottom: 10px;
 }
 .project-image img {
   object-fit: contain;
@@ -50,6 +51,12 @@
   flex-direction: column;
   gap: 10px;
   height: 100%;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--main-text-color);
 }
 .project-description {
   display: flex;

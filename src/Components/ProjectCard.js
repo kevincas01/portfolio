@@ -1,5 +1,5 @@
 import React from "react";
-
+import GitHubIcon from "@mui/icons-material/GitHub";
 const ProjectCard = ({ project }) => {
   return (
     <div className="project-card">
@@ -9,7 +9,14 @@ const ProjectCard = ({ project }) => {
         </div>
       )}
       <div className="project-content">
-        <h3>{project.title}</h3>
+        <div className="project-header">
+          <h3>{project.title}</h3>
+          {project.githubLink && (
+            <a href={project.githubLink} target="_blank">
+              <GitHubIcon />
+            </a>
+          )}
+        </div>
         <div className="project-description">
           <p>{project.description}</p>
         </div>

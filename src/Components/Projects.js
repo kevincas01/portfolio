@@ -7,13 +7,14 @@ const Projects = () => {
       title: "Vibify - Spotify social media app",
       description: `A full-stack web app that enhances your Spotify experience with personalized insights and social recommendations. Explore top artists, tracks, and recently played songs. The Recommendations Page lets you discover new music, share favorites, and seamlessly add them to your Spotify playlists.`,
       skills: ["Typescript", "Next", "Next Auth", "Spotify API"],
-       imagePath:"/projects/vibify1.png"
+      imagePath: "/projects/vibify1.png",
+      githubLink:"https://github.com/kevincas01/Vibify"
     },
     {
       title: "Unlimited",
       description: `A fully functional replica of the NYT Wordle and Connections games, enabling users to play unlimited games without the daily restriction. The application mirrors the core gameplay mechanics of the original games, offering users the same word puzzle challenges and variety, but with the added benefit of unlimited gameplay, making it accessible at any time.`,
       skills: ["React", "Javascript", "HTML", "CSS"],
-      imagePath:"/projects/unlimited1.png"
+      imagePath: "/projects/unlimited1.png",
     },
     {
       title: "Vidload",
@@ -39,7 +40,7 @@ const Projects = () => {
 
       <div className="card-container">
         {projectsList.map((project, index) => (
-         <ProjectCard project={project}/>
+          <ProjectCard project={project} />
         ))}
       </div>
     </>

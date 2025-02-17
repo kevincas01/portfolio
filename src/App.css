@@ -56,6 +56,11 @@ body {
 
   overscroll-behavior: none;
 }
+a{
+  color: inherit; /* Inherits the text color from the parent element */
+  text-decoration: none;
+}
+
 .switch-mode-container {
   position: relative;
   display: flex;
