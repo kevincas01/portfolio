@@ -19,6 +19,12 @@ const Projects = () => {
       siteLink: "https://gamecenter-single-player.vercel.app/",
     },
     {
+      title: "Elemental",
+      description: `A web app that showcases reusable UI components with interactive demos and code snippets for developers. Built with React and Tailwind CSS, Elemental highlights real-world UI solutions with clean, reusable code. Explore components in action, review their implementation, and seamlessly integrate them into your own projects.`,
+      skills: ["Typescript", "Next", "Next Auth", "Spotify API"],
+      githubLink: "https://github.com/kevincas01/Vibify",
+    },
+    {
       title: "Vidload",
       description: `A video streaming application that allows users to upload, edit, and view videos. To support these features, I built a Node.js API server that facilitates video and image uploads to an AWS S3 bucket, transfers media via AWS CloudFront for fast delivery, and stores user data securely in a PostgreSQL database.`,
       skills: ["AWS S3 & Cloudfront", "Typescript", "React", "Authentication"],
