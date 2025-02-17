@@ -7,18 +7,18 @@ const Projects = () => {
       title: "Vibify - Spotify social media app",
       description: `A full-stack web app that enhances your Spotify experience with personalized insights and social recommendations. Explore top artists, tracks, and recently played songs. The Recommendations Page lets you discover new music, share favorites, and seamlessly add them to your Spotify playlists.`,
       skills: ["Typescript", "Next", "Next Auth", "Spotify API"],
-      
-    },
-    {
-      title: "Vidload",
-      description: `A video streaming application that allows users to upload, edit, and view videos. To support these features, I built a Node.js API server that facilitates video and image uploads to an AWS S3 bucket, transfers media via AWS CloudFront for fast delivery, and stores user data securely in a PostgreSQL database.`,
-      skills: ["AWS S3 & Cloudfront", "Typescript", "React", "Authentication"],
+       imagePath:"/projects/vibify1.png"
     },
     {
       title: "Unlimited",
       description: `A fully functional replica of the NYT Wordle and Connections games, enabling users to play unlimited games without the daily restriction. The application mirrors the core gameplay mechanics of the original games, offering users the same word puzzle challenges and variety, but with the added benefit of unlimited gameplay, making it accessible at any time.`,
       skills: ["React", "Javascript", "HTML", "CSS"],
       imagePath:"/projects/unlimited1.png"
+    },
+    {
+      title: "Vidload",
+      description: `A video streaming application that allows users to upload, edit, and view videos. To support these features, I built a Node.js API server that facilitates video and image uploads to an AWS S3 bucket, transfers media via AWS CloudFront for fast delivery, and stores user data securely in a PostgreSQL database.`,
+      skills: ["AWS S3 & Cloudfront", "Typescript", "React", "Authentication"],
     },
     {
       title: "Tigerfit",
