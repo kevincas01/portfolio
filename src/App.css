@@ -36,7 +36,7 @@
   --main-color: #007b9e; /* A richer cyan tone for better visibility */
   --main-text-color: #1a1a1a; /* Darker blackish text for better contrast */
   --main-background-color: #fdfdfd; /* Off-white to reduce glare */
-  --secondary-background-color: rgba(0, 124, 158, 0.15);
+  --secondary-background-color: rgba(0, 124, 158, 0.20);
   --contrast-background-color: #F1F1F1;
   --main-gradient-secondary-color: rgba(0, 60, 78, 0.767);
   --gray-text-color: #3d4663;
