@@ -50,7 +50,7 @@ const Projects = () => {
 
       <div className="card-container">
         {projectsList.map((project, index) => (
-          <ProjectCard project={project} />
+          <ProjectCard project={project} key={index} />
         ))}
       </div>
     </>
