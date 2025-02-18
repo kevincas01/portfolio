@@ -147,6 +147,9 @@ button:hover {
 .experience {
   scroll-margin-top: var(--navbar-height);
 }
+.contact {
+  scroll-margin-top: var(--navbar-height);
+}
 
 .scroll-top-button {
   margin: 20px 0px;
