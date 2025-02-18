@@ -3,6 +3,7 @@ import "../Styles/navbar.css";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { SlidingTabSelector } from "./SlidingLinksSelector";
 const Navbar = ({
   navbarHomeElements,
   activeElement,
@@ -25,6 +26,15 @@ const Navbar = ({
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleTabSelect = (elementRef) => {
+    setIsNavToggled(false);
+    elementRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  };
 
   return (
     <>
@@ -70,8 +80,14 @@ const Navbar = ({
               >
                 {element.text}
               </span>
-            ))}{" "}
+            ))}
           </div>
+          
+          <SlidingTabSelector
+            onTabSelect={handleTabSelect}
+            tabs={navbarHomeElements}
+            activeTab={activeElement}
+          />
           <div className="navbar-group">
             <GitHubIcon
               sx={{ cursor: "pointer" }}

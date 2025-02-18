@@ -16,7 +16,6 @@ function App() {
   const navbarRefs = [aboutRef, experienceRef, projectsRef, contactRef];
 
   const navbarHomeElements = [
-    ,
     {
       text: "About",
       value: "about",
