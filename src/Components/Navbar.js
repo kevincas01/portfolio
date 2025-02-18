@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../Styles/navbar.css";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
@@ -10,11 +10,28 @@ const Navbar = ({
   isDarkMode,
   toggleTheme,
 }) => {
-  const [scrolled, setScrolled] = React.useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const [isNavToggled, setIsNavToggled] = React.useState(false);
+  const [isNavToggled, setIsNavToggled] = useState(false);
+  const headerRef = useRef(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (headerRef.current && !headerRef.current.contains(event.target)) {
+        setIsNavToggled(false);
+      }
+    };
+
+    if (isNavToggled) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isNavToggled]);
+
+  useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 100;
       setScrolled(isScrolled);
@@ -38,7 +55,7 @@ const Navbar = ({
 
   return (
     <>
-      <div className={scrolled ? "navbar scrolled" : "navbar"}>
+      <div className={scrolled ? "navbar scrolled" : "navbar"} ref={headerRef}>
         <div className="nav-name">
           <span
             className={`nav-item ${
@@ -82,7 +99,7 @@ const Navbar = ({
               </span>
             ))}
           </div>
-          
+
           <SlidingTabSelector
             onTabSelect={handleTabSelect}
             tabs={navbarHomeElements}
