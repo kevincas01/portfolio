@@ -14,7 +14,7 @@ const SlideTabs = ({ onTabSelect, tabs, activeTab }) => {
   // Function to reset position to the active tab
   const resetToActiveTab = () => {
     const activeTabRef = tabRefs.current[activeTab]; // Get ref of active tab
-    if (activeTabRef) {
+    if (activeTabRef && !tabClicked) {
       const { width } = activeTabRef.getBoundingClientRect();
       setPosition({ left: activeTabRef.offsetLeft, width, opacity: 1 });
     }
