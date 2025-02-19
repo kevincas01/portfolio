@@ -19,6 +19,12 @@ const Projects = () => {
       siteLink: "https://gamecenter-single-player.vercel.app/",
     },
     {
+      title: "AlgoLens",
+      description: `A web app that helps to visualize how data structures and algorithms work, including pathfinding and sorting techniques. Watch as algorithms like Depth First Search, QuickSort, and MergeSort execute step by step. Designed for students and developers, AlgoLens provides an interactive way to explore and understand how algorithms work.`,
+      skills: ["React", "Javascript", "CSS", "SVG"],
+      githubLink: "https://github.com/kevincas01/AlgoLens",
+    },
+    {
       title: "Elemental",
       description: `A web app that showcases reusable UI components with interactive demos and code snippets for developers. Built with React and Tailwind CSS, Elemental highlights real-world UI solutions with clean, reusable code. Explore components in action, review their implementation, and seamlessly integrate them into your own projects.`,
       skills: ["Typescript", "Next", "Next Auth", "Spotify API"],
