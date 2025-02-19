@@ -4,6 +4,13 @@ import ProjectCard from "./ProjectCard";
 const Projects = () => {
   const projectsList = [
     {
+      title: "Elemental",
+      description: `A web app that showcases reusable UI components with interactive demos and code snippets for developers. Built with React and Tailwind CSS, Elemental highlights real-world UI solutions with clean, reusable code. Explore components in action, review their implementation, and seamlessly integrate them into your own projects.`,
+      skills: ["Typescript", "Next", "Next Auth", "Spotify API"],
+      imagePath: "/projects/elemental1.png",
+      githubLink: "https://github.com/kevincas01/Vibify",
+    },
+    {
       title: "Vibify - Spotify social media app",
       description: `A full-stack web app that enhances your Spotify experience with personalized insights and social recommendations. Explore top artists, tracks, and recently played songs. The Recommendations Page lets you discover new music, share favorites, and seamlessly add them to your Spotify playlists.`,
       skills: ["Typescript", "Next", "Next Auth", "Spotify API"],
@@ -25,13 +32,7 @@ const Projects = () => {
       imagePath: "/projects/algolens1.png",
       githubLink: "https://github.com/kevincas01/AlgoLens",
     },
-    {
-      title: "Elemental",
-      description: `A web app that showcases reusable UI components with interactive demos and code snippets for developers. Built with React and Tailwind CSS, Elemental highlights real-world UI solutions with clean, reusable code. Explore components in action, review their implementation, and seamlessly integrate them into your own projects.`,
-      skills: ["Typescript", "Next", "Next Auth", "Spotify API"],
-      imagePath: "/projects/elemental1.png",
-      githubLink: "https://github.com/kevincas01/Vibify",
-    },
+
     {
       title: "Vidload",
       description: `A video streaming application that allows users to upload, edit, and view videos. To support these features, I built a Node.js API server that facilitates video and image uploads to an AWS S3 bucket, transfers media via AWS CloudFront for fast delivery, and stores user data securely in a PostgreSQL database.`,
