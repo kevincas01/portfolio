@@ -41,7 +41,7 @@ function App() {
       ref: contactRef,
     },
   ];
-  const [activeElement, setActiveElement] = useState("");
+  const [activeElement, setActiveElement] = useState("about");
 
   useEffect(() => {
     const handleScroll = () => {
