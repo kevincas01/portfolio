@@ -29,6 +29,7 @@ const Projects = () => {
       title: "Elemental",
       description: `A web app that showcases reusable UI components with interactive demos and code snippets for developers. Built with React and Tailwind CSS, Elemental highlights real-world UI solutions with clean, reusable code. Explore components in action, review their implementation, and seamlessly integrate them into your own projects.`,
       skills: ["Typescript", "Next", "Next Auth", "Spotify API"],
+      imagePath: "/projects/elemental1.png",
       githubLink: "https://github.com/kevincas01/Vibify",
     },
     {
