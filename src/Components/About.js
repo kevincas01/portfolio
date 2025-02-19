@@ -29,22 +29,21 @@ const About = () => {
         <div className="about-info-text">
           <h2>Get to know me!</h2>
           <p>
-           I graduated from Princeton University with a Bachelors Degree in Computer Science.
+            I graduated from Princeton University with a Bachelor's Degree in
+            Computer Science, which ignited my spark for technology.
           </p>
           <p>
-            My experience in various software projects has allowed me to
-            showcase my ability to create robust, scalable, and maintainable
-            applications.
+            Now, that spark is fueled by my curiosity—how products are built,
+            the challenges solved, and how I&rsquo;d approach them. This
+            curiosity drives me to explore new technologies, refine my
+            problem-solving skills, and continuously grow as a developer. More
+            than anything, I love the process of transforming an idea into a
+            fully functional, seamless experience that people could rely on.
           </p>
 
           <p>
-            As a passionate software developer, I am dedicated to perfecting my
-            craft and continuously expanding my{" "}
-            <span className="special-word">knowledge</span>. I am actively
-            seeking new opportunities where I can contribute and grow. If you
-            have an exciting opportunity that resonates with my skills and
-            experience, I'd be thrilled to connect. Do not hesitate to reach
-            out!
+            If you have an exciting opportunity that resonates with my skills
+            and experience, I&rsquo;d love to connect and collaborate!
           </p>
         </div>
 
