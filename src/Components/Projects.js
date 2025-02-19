@@ -22,6 +22,7 @@ const Projects = () => {
       title: "AlgoLens",
       description: `A web app that helps to visualize how data structures and algorithms work, including pathfinding and sorting techniques. Watch as algorithms like Depth First Search, QuickSort, and MergeSort execute step by step. Designed for students and developers, AlgoLens provides an interactive way to explore and understand how algorithms work.`,
       skills: ["React", "Javascript", "CSS", "SVG"],
+      imagePath: "/projects/algolens1.png",
       githubLink: "https://github.com/kevincas01/AlgoLens",
     },
     {
