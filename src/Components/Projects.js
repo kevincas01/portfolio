@@ -19,6 +19,13 @@ const Projects = () => {
       githubLink: "https://github.com/kevincas01/Vibify",
     },
     {
+      title: "AlgoLens",
+      description: `A web app that helps to visualize how data structures and algorithms work, including pathfinding and sorting techniques. Watch as algorithms like Depth First Search, QuickSort, and MergeSort execute step by step. Designed for students and developers, AlgoLens provides an interactive way to explore and understand how algorithms work.`,
+      skills: ["React", "Javascript", "CSS", "SVG"],
+      imagePath: "/projects/algolens1.png",
+      githubLink: "https://github.com/kevincas01/AlgoLens",
+    },
+    {
       title: "Unlimited",
       description: `A fully functional replica of the NYT Wordle and Connections games, enabling users to play unlimited games without the daily restriction. The application mirrors the core gameplay mechanics of the original games, offering users the same word puzzle challenges and variety, but with the added benefit of unlimited gameplay, making it accessible at any time.`,
       skills: ["React", "Javascript", "HTML", "CSS"],
@@ -26,14 +33,6 @@ const Projects = () => {
       githubLink: "https://github.com/kevincas01/gamecenter-single-player",
       siteLink: "https://gamecenter-single-player.vercel.app/",
     },
-    {
-      title: "AlgoLens",
-      description: `A web app that helps to visualize how data structures and algorithms work, including pathfinding and sorting techniques. Watch as algorithms like Depth First Search, QuickSort, and MergeSort execute step by step. Designed for students and developers, AlgoLens provides an interactive way to explore and understand how algorithms work.`,
-      skills: ["React", "Javascript", "CSS", "SVG"],
-      imagePath: "/projects/algolens1.png",
-      githubLink: "https://github.com/kevincas01/AlgoLens",
-    },
-
     {
       title: "Vidload",
       description: `A video streaming application that allows users to upload, edit, and view videos. To support these features, I built a Node.js API server that facilitates video and image uploads to an AWS S3 bucket, transfers media via AWS CloudFront for fast delivery, and stores user data securely in a PostgreSQL database.`,
