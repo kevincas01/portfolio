@@ -56,8 +56,6 @@ body {
   font-family: "Poppins", sans-serif;
 
   overscroll-behavior: none;
-  max-width: 100vw;
-  width: 100vw;
 }
 a{
   color: inherit; /* Inherits the text color from the parent element */
