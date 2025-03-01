@@ -78,11 +78,11 @@ const Profile = () => {
   return (
     <div className="profile-container">
       <div className="profile">
-        <div className="profile-headshot">
+        <div >
           <img
             src="/images/KevinC.jpeg"
             alt="Kevin Castro Headshot"
-            id="photo"
+            id="profile-photo"
           ></img>
         </div>
         <div className="profile-content">
