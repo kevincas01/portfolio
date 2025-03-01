@@ -23,6 +23,8 @@
 }
 .experience-descriptions{
   color: var(--gray-text-color);
+  list-style-position:inside;
+  list-style-type:square
 }
 .experience-skills {
   display: flex;
@@ -43,9 +45,8 @@
 
 .experience-content.hoverable:hover {
   background-color: var(--contrast-background-color);
- 
-  cursor: pointer;
 
+  cursor: pointer;
   border-radius: 10px;
 }
 
