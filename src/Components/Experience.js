@@ -6,16 +6,26 @@ const Experience = () => {
     {
       startDate: "Sept 2024",
       role: "Freelance Software Developer",
-      description: `Developing a full stack application using Next.js and Tyepscript, integrating a PostgreSQL database for efficient data management and storage. Implemented a menu-driven Point of Sale(POS) system with integrated secure paymenet processing via Stripe API, enabling seamless transactions, real-time inventory tracking, and operationial efficiency `,
-      skills: ["Next.js", "Typescript", "React", "HTML & CSS", "Stripe API"],
+      description: [
+        "Designed and developed a full-stack application using Next.js and TypeScript, architecting a scalable system with a PostgreSQL database for efficient data management and storage.",
+        "Engineered a robust, menu-driven Point of Sale (POS) system with  secure payment processing via the Stripe API, enhancing transaction efficiency and business operations.",
+        "Led the end-to-end system design and architecture, ensuring scalability, maintainability, and optimal performance.",
+        "Collaborated closely with client to translate requirements into well-structured features and high-performance user interfaces.",
+      ],
+      skills: ["Next.js", "TypeScript", "React", "HTML & CSS", "Stripe API"],
       url: "",
     },
+
     {
       startDate: "April 2024",
       endDate: "Aug 2024",
       role: "Fullstack Software Engineer",
       company: "Bioverse",
-      description: `I designed, architected, and implemented a robust tagging system for order management, streamlining the revision and tracking process for company personnel, which resulted in a 20% increase in the number of orders completed. Additionally, I translated over 50 Figma designs into fully responsive web pages, ensuring consistency with design specifications and enhancing the overall user experience. To further optimize operations, I developed automated scripts that tracked the status of products using the pharmacy and EasyPost APIs, improving efficiency and reducing manual oversight.`,
+      description: [
+        "Designed, architected, and implemented a robust tagging system for order management, streamlining the revision and tracking process for company personnel, resulting in a 20% increase in completed orders.",
+        "Translated over 50 Figma designs into fully responsive web pages, ensuring consistency with design specifications and enhancing the overall user experience.",
+        "Developed automated scripts that tracked the status of products using the Pharmacy and EasyPost APIs, improving operational efficiency and reducing manual oversight.",
+      ],
       skills: ["Next.js", "Typescript", "EasyPost", "Stripe API"],
       url: "https://app.gobioverse.com/",
     },
@@ -24,7 +34,12 @@ const Experience = () => {
       endDate: "Aug 2022",
       role: "Software Engineer Intern",
       company: "Mantula Solar",
-      description: `Led an overhaul of an existing web application by replacing its legacy framework with React, ensuring a more responsive and interactive user experience. To optimize performance, I integrated TypeScript and compressed images, resulting in a 30% reduction in loading times, which enhanced the experience for prospective customers. Additionally, I developed an automated contact sheet system with real-time email distribution to designated company recipients. I also reviewed and resolved code issues submitted by other interns, contributing to the overall efficiency and quality of the project.`,
+      description: [
+        "Led an overhaul of an existing web application by replacing its legacy framework with React, improving responsiveness and interactivity.",
+        "Optimized performance by integrating TypeScript and compressing images, reducing loading times by 30% and enhancing the experience for prospective customers.",
+        "Developed an automated contact sheet system with real-time email distribution to designated company recipients, streamlining internal communication.",
+        "Reviewed and resolved code issues submitted by other interns, contributing to overall project efficiency and code quality.",
+      ],
       skills: ["Javascript", "HTML & CSS"],
       url: "https://mantula.co.za/",
     },
@@ -33,8 +48,11 @@ const Experience = () => {
       endDate: "Sept 2022",
       role: "Tutor",
       company: "Princeton University Mcgraw Center",
-      description: `As a tutor, I provided personalized, one-on-one assistance to help students better understand statistical concepts and coding fundamentals. 
-      I also led group sessions for over 40 students, facilitating advanced coding exercises and promoting collaborative problem-solving. Through these interactions, I ensured that students gained a thorough understanding of statistical theory and its application in the social sciences.`,
+      description: [
+        "Provided personalized, one-on-one tutoring to help students grasp statistical concepts and coding fundamentals.",
+        "Led group sessions for over 40 students, facilitating advanced coding exercises and fostering collaborative problem-solving.",
+        "Ensured students gained a thorough understanding of statistical theory and its application in the social sciences through interactive teaching methods.",
+      ],
       skills: [],
       url: "https://mcgraw.princeton.edu/",
     },
@@ -66,7 +84,12 @@ const Experience = () => {
                 {experience.role}{" "}
                 {experience.company && " • " + experience.company}
               </h3>
-              <p>{experience.description}</p>
+              <ul className="experience-descriptions">
+                {experience.description.map((point, index) => (
+                  <li key={index}>{point}</li>
+                ))}
+              </ul>
+
               <div className="experience-skills">
                 {experience.skills.map((skill, index) => (
                   <div className="skill" key={skill}>
