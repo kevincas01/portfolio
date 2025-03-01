@@ -68,7 +68,7 @@ h1.profile-name::after {
   }
 }
 
-#photo {
+#profile-photo {
   border-radius: 50%;
   height: 30vw;
   width: 30vw;
@@ -76,6 +76,8 @@ h1.profile-name::after {
   max-height: 400px;
   min-width: 200px;
   min-height: 200px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .profile-buttons {
@@ -89,14 +91,13 @@ h1.profile-name::after {
   font-weight: bold;
 }
 
-
 @media screen and (max-width: 830px) {
   .profile {
     grid-template-columns: 1fr;
     align-items: center;
   }
 
-  .profile-headshot #photo {
+  #profile-photo {
     min-height: 300px;
     min-width: 300px;
     height: 40vw;
