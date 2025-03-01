@@ -21,6 +21,9 @@
   flex-direction: column;
   gap: 25px;
 }
+.experience-descriptions{
+  color: var(--gray-text-color);
+}
 .experience-skills {
   display: flex;
   gap: 10px;
