@@ -40,15 +40,15 @@ const Projects = () => {
       githubLink: "https://github.com/kevincas01/Video-Upload",
     },
     {
-      title: "Tigerfit",
-      description: `A full-stack fitness app for Princeton students to track workouts and visualize progress, gaining 100+ active users. Features interactive charts and analytics on weight and lifted weight. Published on TigerApps, Princeton’s student-built app hub.`,
-      skills: ["Python", "Flask", "Javascript", "HTML", "CSS"],
-    },
-    {
       title: "Spaceship Trainer",
       description: `Developed and designed a 3D first person shooting game built with the Three.js 3D computer graphics framework.`,
       skills: ["Three.js", "HTML", "Javascript", "CSS"],
       githubLink: "https://github.com/kevincas01/SpaceShipTrainer",
+    },
+    {
+      title: "Tigerfit",
+      description: `A full-stack fitness app for Princeton students to track workouts and visualize progress, gaining 100+ active users. Features interactive charts and analytics on weight and lifted weight. Published on TigerApps, Princeton’s student-built app hub.`,
+      skills: ["Python", "Flask", "Javascript", "HTML", "CSS"],
     },
   ];
   return (
