@@ -1,6 +1,7 @@
 import React from "react";
 import "../Styles/projects.css";
 import ProjectCard from "./ProjectCard";
+import VibifyModalContent from "./Projects/VibifyModalContent";
 const Projects = () => {
   const projectsList = [
     {
@@ -17,6 +18,7 @@ const Projects = () => {
       skills: ["Typescript", "Next", "Next Auth", "Spotify API"],
       imagePath: "/projects/vibify1.png",
       githubLink: "https://github.com/kevincas01/Vibify",
+      modalContent:<VibifyModalContent/>
     },
     {
       title: "AlgoLens",
