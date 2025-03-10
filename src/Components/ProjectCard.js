@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
+import ModalContainer from "./ModalContainer";
 const ProjectCard = ({ project }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (project) => {
+    if (!project.modalContent) return;
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(prev=>!prev);
+  };
   return (
-    <div className="project-card">
+    <div className="project-card" onClick={() => openModal(project)}>
       {project.imagePath && (
         <div className="project-image">
           <img src={project.imagePath}></img>
@@ -36,6 +47,11 @@ const ProjectCard = ({ project }) => {
           ))}
         </div>
       </div>
+      {isModalOpen && (
+        <ModalContainer title={project.title} onClose={closeModal}>
+          {project.modalContent}
+        </ModalContainer>
+      )}
     </div>
   );
 };
