@@ -12,6 +12,7 @@ const ElementalModalContent = () => {
       </p>
 
       <div className="feature-section">
+        <h2>Features</h2>
         <ul>
           <li>Explore fully interactive UI components in action.</li>
           <li>
@@ -27,7 +28,6 @@ const ElementalModalContent = () => {
       <div className="media-section">
         <h2>Explore the App</h2>
         <div className="media-gallery">
-         
           <div className="media-item">
             <h3>All Components Page</h3>
             <img
