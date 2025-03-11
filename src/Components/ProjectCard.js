@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
 import ModalContainer from "./ModalContainer";
+import ProjectContentContainer from "./Projects/ProjectContentContainer";
+
 const ProjectCard = ({ project }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = (project) => {
-    if (!project.modalContent) return;
+    if (!project.media) return;
     setIsModalOpen(true);
   };
 
@@ -17,7 +19,7 @@ const ProjectCard = ({ project }) => {
     <div
       className="project-card"
       onClick={() => openModal(project)}
-      style={{ cursor: project.modalContent ? "pointer" : "default" }}
+      style={{ cursor: project.media ? "pointer" : "default" }}
     >
       {project.imagePath && (
         <div className="project-image">
@@ -54,6 +56,7 @@ const ProjectCard = ({ project }) => {
       {isModalOpen && (
         <ModalContainer title={project.title} onClose={closeModal}>
           {project.modalContent}
+          <ProjectContentContainer project={project}/>
         </ModalContainer>
       )}
     </div>

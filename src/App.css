@@ -225,6 +225,14 @@ h1::after {
   cursor: pointer;
 }
 
+.media-section-header{
+  display:flex; 
+  justify-content: space-between;
+  
+}
+.media-section-header div{
+  color:var(--main-color)
+}
 
 .media-gallery {
   display: flex;
