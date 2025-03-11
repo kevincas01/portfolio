@@ -11,10 +11,14 @@ const ProjectCard = ({ project }) => {
   };
 
   const closeModal = () => {
-    setIsModalOpen(prev=>!prev);
+    setIsModalOpen(false);
   };
   return (
-    <div className="project-card" onClick={() => openModal(project)}>
+    <div
+      className="project-card"
+      onClick={() => openModal(project)}
+      style={{ cursor: project.modalContent ? "pointer" : "default" }}
+    >
       {project.imagePath && (
         <div className="project-image">
           <img src={project.imagePath}></img>
