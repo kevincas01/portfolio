@@ -32,37 +32,37 @@ const VibifyModalContent = () => {
         <h2>Explore the App</h2>
         <div className="media-gallery">
           <div className="media-item">
+            <h3>Dashboard Page</h3>
             <img src="/projects/Vibify/dashboard.png" alt="Dashboard" />
-            <p>Dashboard</p>
           </div>
           <div className="media-item">
+            <h3>Recommendations Feed Page</h3>
             <img
               src="/projects/Vibify/feed.png"
-              alt="Feed Recommendations Page"
+              alt="Recommendations Feed Page"
             />
-            <p>Feed Recommendations</p>
           </div>
           <div className="media-item">
+            <h3>Recommending Page</h3>
             <img
               src="/projects/Vibify/recommending.png"
               alt="Recommending Page"
             />
-            <p>Recommending Page</p>
           </div>
           <div className="media-item">
+            <h3>Playlists Page</h3>
             <img
               src="/projects/Vibify/playlists.png"
               alt="Spotify Playlists Page"
             />
-            <p>Spotify Playlists</p>
           </div>
           <div className="media-item">
+            <h3>Top Tracks Page</h3>
             <img src="/projects/Vibify/tracks.png" alt="Top Tracks Page" />
-            <p>Top Tracks</p>
           </div>
           <div className="media-item">
+            <h3>Top Artists Page</h3>
             <img src="/projects/Vibify/artists.png" alt="Top Artists Page" />
-            <p>Top Artists</p>
           </div>
         </div>
       </div>
