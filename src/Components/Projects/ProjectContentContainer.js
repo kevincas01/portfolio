@@ -43,12 +43,18 @@ const ProjectContentContainer = ({ project }) => {
           {project.media.map((mediaItem, index) => (
             <div className="media-item" key={index}>
               <h3>{mediaItem.title}</h3>
-              <img src={mediaItem.src} alt={mediaItem.alt} />
+              {mediaItem.fileType === "image" ? (
+                <img src={mediaItem.src} alt={mediaItem.alt} />
+              ) : (
+                <video controls>
+                  <source src={mediaItem.src} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
             </div>
           ))}
         </div>
       </div>
-
     </>
   );
 };
