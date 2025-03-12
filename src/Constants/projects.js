@@ -2,7 +2,7 @@ export const projectsList = [
   {
     title: "Elemental",
     description: `A web app that showcases reusable UI components with interactive demos and code snippets for developers. Built with React and Tailwind CSS, Elemental highlights real-world UI solutions with clean, reusable code. Explore components in action, review their implementation, and seamlessly integrate them into your own projects.`,
-    skills: [ "Tailwind CSS","Typescript", "Next.js"],
+    skills: ["Tailwind CSS", "Typescript", "Next.js"],
     imagePath: "/projects/elemental1.png",
     githubLink: "https://github.com/kevincas01/elemental",
     siteLink: "https://elemental-ui.vercel.app/",
@@ -42,7 +42,13 @@ export const projectsList = [
   {
     title: "Vibify - Spotify social media app",
     description: `A full-stack web app that enhances your Spotify experience with personalized insights and social recommendations. Explore top artists, tracks, and recently played songs. The Recommendations Page lets you discover new music, share favorites, and seamlessly add them to your Spotify playlists.`,
-    skills: ["Tailwind CSS","Typescript", "Next.js", "NextAuth", "Spotify API"],
+    skills: [
+      "Tailwind CSS",
+      "Typescript",
+      "Next.js",
+      "NextAuth",
+      "Spotify API",
+    ],
     imagePath: "/projects/vibify1.png",
     githubLink: "https://github.com/kevincas01/Vibify",
     features: [
@@ -103,6 +109,26 @@ export const projectsList = [
     skills: ["React", "Javascript", "CSS", "SVG"],
     imagePath: "/projects/algolens1.png",
     githubLink: "https://github.com/kevincas01/AlgoLens",
+    features: [
+      "Visualize sorting algorithms like QuickSort, MergeSort, and Bubble Sort",
+      "Visualize pathfinding algorithms, including Depth First Search (DFS) and Breadth First Search (BFS)",
+      "Visualize data structures like heaps, stacks, and queues",
+      "Control algorithm execution speed for a better learning experience",
+    ],
+    media: [
+      {
+        title: "Pathfinding Algorithm Visualization- BFS",
+        src: "/projects/Algolens/pathfinding.mp4",
+        alt: "Algorithm Visualization",
+        fileType: "video",
+      },
+      {
+        title: "Component Page - Card Code Example",
+        src: "/projects/Algolens/sorting.mp4",
+        alt: "Card Components Page - Code",
+        fileType: "video",
+      },
+    ],
   },
   {
     title: "Unlimited",
@@ -115,7 +141,12 @@ export const projectsList = [
   {
     title: "Vidload",
     description: `A video streaming application that allows users to upload, edit, and view videos. To support these features, I built a Node.js API server that facilitates video and image uploads to an AWS S3 bucket, transfers media via AWS CloudFront for fast delivery, and stores user data securely in a PostgreSQL database.`,
-    skills: ["AWS S3 & Cloudfront", "Typescript", "React", "JWT Authentication"],
+    skills: [
+      "AWS S3 & Cloudfront",
+      "Typescript",
+      "React",
+      "JWT Authentication",
+    ],
     githubLink: "https://github.com/kevincas01/Video-Upload",
   },
   {
