@@ -6,12 +6,15 @@ const ProjectContentContainer = ({ project }) => {
     <>
       <p>{project.description}</p>
 
-      <div className="project-skills">
-        {project.skills.map((skill, index) => (
-          <div className="project-skill" key={skill}>
-            {skill}
-          </div>
-        ))}
+      <div>
+        <h2 style={{textAlign:"center"}}>Technologies Used</h2>
+        <div className="project-skills">
+          {project.skills.map((skill, index) => (
+            <div className="project-skill" key={skill}>
+              {skill}
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="feature-section">
@@ -26,15 +29,15 @@ const ProjectContentContainer = ({ project }) => {
       <div className="media-section">
         <div className="media-section-header">
           <h2>Explore the App</h2>
-          <div className="project-links">
+          <div className="modal-project-links">
             {project.githubLink && (
               <a href={project.githubLink} target="_blank">
-                <GitHubIcon />
+                <GitHubIcon fontSize="inherit"/>
               </a>
             )}
             {project.siteLink && (
               <a href={project.siteLink} target="_blank">
-                <LaunchIcon />
+                <LaunchIcon fontSize="inherit"/>
               </a>
             )}
           </div>

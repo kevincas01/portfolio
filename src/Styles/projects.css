@@ -15,6 +15,7 @@
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card-container {
@@ -75,11 +76,15 @@
   padding: 5px 10px;
 }
 
+.modal-project-links {
+  display: flex;
+  gap: 5px;
+  font-size: 30px;
+
+}
+
 @media screen and (max-width: 768px) {
   .card-container {
     grid-template-columns: 1fr;
-  }
-  .project-skills {
-    justify-content: center;
   }
 }
