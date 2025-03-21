@@ -117,15 +117,15 @@ export const projectsList = [
     ],
     media: [
       {
-        title: "Pathfinding Algorithm Visualization- BFS",
+        title: "Pathfinding Algorithm Visualization - BFS",
         src: "/projects/Algolens/pathfinding.mp4",
-        alt: "Algorithm Visualization",
+        alt: "Algorithm Visualization - BFS",
         fileType: "video",
       },
       {
-        title: "Component Page - Card Code Example",
+        title: "Sorting Algorithm Visualization - Quick Sort",
         src: "/projects/Algolens/sorting.mp4",
-        alt: "Card Components Page - Code",
+        alt: "Algorithm Visualization - Quick Sort",
         fileType: "video",
       },
     ],
