@@ -9,7 +9,7 @@ const ModalContainer = ({ title, onClose, children }) => {
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-box" onClick={(e) => e.stopPropagation()}> {/* Prevent clicks on the modal content from closing */}
+      <div className="modal-box"> {/* Prevent clicks on the modal content from closing */}
         <div className="modal-header">
           <h2>{title}</h2>
           <div onClick={handleCloseClick}>
