@@ -20,21 +20,14 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
-}
-.experience-descriptions{
-  color: var(--gray-text-color);
-  list-style-position:inside;
-  list-style-type:square
+  margin-bottom: 100px;
 }
 .experience-skills {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
-.experience-dates{
-  padding: 20px 0px 0px 20px ;
 
-}
 .experience-content {
   display: flex;
   flex-direction: column;
@@ -57,4 +50,69 @@
   .experience-skills {
     justify-content: center;
   }
+}
+
+.experience-element {
+  display: flex;
+  gap: 24px;
+}
+
+.experience-step-bar {
+  position: relative;
+  min-width: 12px;
+  border-radius: 0.75rem; /* rounded-xl */
+  background-color: #d9d9d9;
+  z-index: 10;
+}
+
+.experience-step-fill {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+  background-color: var(--main-color);
+  z-index: 20;
+}
+
+.experience-content {
+  width: 100%;
+}
+
+.experience-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.experience-title-container {
+  flex: 1;
+}
+
+.experience-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+@media (min-width: 640px) {
+  .experience-title {
+    font-size: 1.875rem;
+  }
+}
+
+.experience-date {
+  font-size: 0.9rem;
+  color: var(--gray-text-color);
+  font-weight: 500;
+}
+
+.experience-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: hidden;
+  font-family: "TwCenMTStd-Medium", sans-serif; /* Or your equivalent */
+  font-size: 1rem;
 }
