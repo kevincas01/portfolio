@@ -4,6 +4,7 @@
   align-items: center; /* Center horizontally */
   max-width: var(--max-width);
   margin: auto;
+  padding: 0px 20px;
 }
 .experience-header {
   display: flex;
@@ -41,15 +42,6 @@
 
   cursor: pointer;
   border-radius: 10px;
-}
-
-@media screen and (max-width: 768px) {
-  .experience-component {
-    grid-template-columns: 1fr;
-  }
-  .experience-skills {
-    justify-content: center;
-  }
 }
 
 .experience-element {
@@ -96,11 +88,6 @@
   font-weight: 600;
 }
 
-@media (min-width: 640px) {
-  .experience-title {
-    font-size: 1.875rem;
-  }
-}
 
 .experience-date {
   font-size: 0.9rem;
@@ -115,4 +102,18 @@
   overflow-y: hidden;
   font-family: "TwCenMTStd-Medium", sans-serif; /* Or your equivalent */
   font-size: 1rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  .experience-component {
+    grid-template-columns: 1fr;
+  }
+  .experience-skills {
+    justify-content: center;
+  }
+
+  .experience-top-row {
+    flex-direction: column-reverse;
+  }
 }
