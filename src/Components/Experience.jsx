@@ -1,9 +1,11 @@
 import React from "react";
 import "../Styles/experience.css";
+import ExperienceElement from "./ExperienceElement";
 
 const Experience = () => {
   const experienceList = [
     {
+      stepNumber: 1,
       startDate: "Sept 2024",
       role: "Freelance Software Developer",
       description: [
@@ -17,6 +19,7 @@ const Experience = () => {
     },
 
     {
+      stepNumber: 2,
       startDate: "April 2024",
       endDate: "Aug 2024",
       role: "Fullstack Software Engineer",
@@ -30,6 +33,7 @@ const Experience = () => {
       url: "https://app.gobioverse.com/",
     },
     {
+      stepNumber: 3,
       startDate: "June 2022",
       endDate: "Aug 2022",
       role: "Software Engineer Intern",
@@ -40,10 +44,11 @@ const Experience = () => {
         "Developed an automated contact sheet system with real-time email distribution to designated company recipients, streamlining internal communication.",
         "Reviewed and resolved code issues submitted by other interns, contributing to overall project efficiency and code quality.",
       ],
-      skills: ["Javascript", "HTML & CSS"],
+      skills: ["Javascript", "HTML", "CSS", "Firebase", "React"],
       url: "https://mantula.co.za/",
     },
     {
+      stepNumber: 4,
       startDate: "Sept 2021",
       endDate: "Sept 2022",
       role: "Tutor",
@@ -64,41 +69,13 @@ const Experience = () => {
       </div>
       <div className="experiences-container">
         {experienceList.map((experience, index) => (
-          <div className="experience-component" key={index}>
-            <div className="experience-dates">
-              {experience.startDate} -{" "}
-              {experience.endDate ? experience.endDate : "Present"}
-            </div>
-            <div
-              className={`experience-content ${
-                experience.url ? "hoverable" : ""
-              }`}
-              onClick={() => {
-                if (experience.url) {
-                  window.open(experience.url, "_blank");
-                }
-              }}
-              style={{ cursor: experience.url ? "pointer" : "default" }}
-            >
-              <h3>
-                {experience.role}{" "}
-                {experience.company && " • " + experience.company}
-              </h3>
-              <ul className="experience-descriptions">
-                {experience.description.map((point, index) => (
-                  <li key={index}>{point}</li>
-                ))}
-              </ul>
-
-              <div className="experience-skills">
-                {experience.skills.map((skill, index) => (
-                  <div className="skill" key={skill}>
-                    {skill}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          <ExperienceElement
+            stepNumber={experience.stepNumber}
+            role={experience.role}
+            company={experience.company}
+            description={experience.description}
+            experience={experience}
+          />
         ))}
       </div>{" "}
     </>
