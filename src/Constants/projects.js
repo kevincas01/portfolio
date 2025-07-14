@@ -1,5 +1,41 @@
 export const projectsList = [
   {
+    title: "Finsyte",
+    description: `A full-stack financial tracking app that gives users a clear and insightful view of their money. Finsyte connects securely to your bank and credit accounts via Plaid, categorizes your transactions, and helps you stay on top of spending, income, and recurring expenses. Built with modern tools and a clean UI for intuitive budgeting and money management.`,
+    skills: ["Tailwind CSS", "TypeScript", "Next.js", "Supabase", "Plaid API"],
+    imagePath: "/projects/Finsyte/dashboard.png",
+    githubLink: "https://github.com/kevincas01/Finsyte",
+    features: [
+      "Securely link bank and credit accounts via the Plaid API",
+      "Automatically categorize transactions into spending and income groups",
+      "Track recurring expenses and income streams over time",
+      "Visualize inflows and outflows with interactive charts and dashboards",
+      "View detailed account information including balances and transaction history",
+      "Fully responsive UI designed with Tailwind CSS",
+    ],
+
+    media: [
+      {
+        title: "Dashboard Page",
+        src: "/projects/Finsyte/dashboard.png",
+        alt: "Dashboard Page",
+        fileType: "image",
+      },
+      {
+        title: "Accounts Page",
+        src: "/projects/Finsyte/accounts.png",
+        alt: "Accounts Page",
+        fileType: "image",
+      },
+      {
+        title: "Transactions Page",
+        src: "/projects/Finsyte/transactions.png",
+        alt: "Transactions Page",
+        fileType: "image",
+      },
+    ],
+  },
+  {
     title: "Elemental",
     description: `A web app that showcases reusable UI components with interactive demos and code snippets for developers. Built with React and Tailwind CSS, Elemental highlights real-world UI solutions with clean, reusable code. Explore components in action, review their implementation, and seamlessly integrate them into your own projects.`,
     skills: ["Tailwind CSS", "Typescript", "Next.js"],
@@ -55,7 +91,7 @@ export const projectsList = [
       "Explore top artists and tracks and filter by time period and number of items",
       "Discover music through recommendations from other users",
       "Share and recommend tracks, artists, albums, or playlists to the app",
-      ">Seamlessly add recommendations to your Spotify playlists",
+      "Seamlessly add recommendations to your Spotify playlists",
       "Handle music playback control and play a track directly from the app",
     ],
     media: [
