@@ -19,24 +19,28 @@ function App() {
     {
       text: "About",
       value: "about",
+      className: "section-container-grid",
       element: <About />,
       ref: aboutRef,
     },
     {
       text: "Experience",
       value: "experience",
+      className: "section-container-grid",
       element: <Experience />,
       ref: experienceRef,
     },
     {
       text: "Projects",
       value: "projects",
+      className: "section-container",
       element: <Projects />,
       ref: projectsRef,
     },
     {
       text: "Contact",
       value: "contact",
+      className: "section-container-grid",
       element: <Contact />,
       ref: contactRef,
     },
@@ -99,7 +103,7 @@ function App() {
         {navbarHomeElements.map((element, index) => (
           <div
             key={index}
-            className={element.value+" section-container"}
+            className={`${element.value} ${element.className}`}
             ref={element.ref}
             data-element={element.value}
           >
