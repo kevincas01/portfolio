@@ -77,7 +77,7 @@ const Experience = () => {
             experience={experience}
           />
         ))}
-      </div>{" "}
+      </div>
     </>
   );
 };
