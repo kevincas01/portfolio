@@ -34,12 +34,13 @@ const Contact = () => {
     <>
       <div className="contact-header">
         <h1>CONTACT</h1>
-        <p>Feel free to reach out!</p>
+        <p>If you&rsquo;re working on something exciting and need a developer, have a question about my work, or just want to connect and talk tech (or life), I’d love to hear from you. Don’t hesitate to drop a message!</p>
+
       </div>
 
       <form className="contact-form" ref={form} onSubmit={sendEmail}>
         <div className="contact-input">
-          <label>Name</label>
+          <label>Name *</label>
           <input
             type="text"
             name="from_name"
@@ -49,7 +50,7 @@ const Contact = () => {
         </div>
 
         <div className="contact-input">
-          <label>Email</label>
+          <label>Email *</label>
           <input
             type="email"
             name="email"
@@ -58,12 +59,12 @@ const Contact = () => {
           />
         </div>
         <div className="contact-input">
-          <label>Subject (Optional)</label>
+          <label>Subject</label>
           <input type="text" placeholder="Subject" name="subject" />
         </div>
 
         <div className="contact-input">
-          <label>Message</label>
+          <label>Message *</label>
           <textarea
             name="message"
             placeholder="Enter your message"
