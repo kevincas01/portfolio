@@ -61,6 +61,11 @@ a {
   color: inherit; /* Inherits the text color from the parent element */
   text-decoration: none;
 }
+.skill {
+  color: var(--main-color);
+  background-color: var(--secondary-background-color);
+  padding: 5px 10px;
+}
 
 .switch-mode-container {
   position: relative;
@@ -119,7 +124,6 @@ a {
 
 p {
   color: var(--gray-text-color);
-  font-weight: normal;
   margin: 0;
   font-size: 1rem;
 }
@@ -170,7 +174,6 @@ h1::after {
   width: calc(50px); /* Make the underline wider by 50 pixels */
   height: 5px; /* Set the height of the underline */
   background-color: var(--main-color); /* Set the color of the underline */
-
 }
 
 /* Modal Overlay */
@@ -192,8 +195,6 @@ h1::after {
 .modal-box {
   background-color: var(--contrast-background-color);
   color: var(--main-text-color);
-
-
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
   max-height: 700px;
   max-width: 1200px;
@@ -213,7 +214,7 @@ h1::after {
   align-items: center;
   background-color: var(--contrast-background-color);
   z-index: 50;
-  padding:16px 24px ;
+  padding: 16px 24px;
   color: var(--main-color);
 }
 .modal-body {
@@ -226,19 +227,18 @@ h1::after {
   cursor: pointer;
 }
 
-.media-section-header{
-  display:flex; 
+.media-section-header {
+  display: flex;
   justify-content: space-between;
-  
 }
-.media-section-header div{
-  color:var(--main-color)
+.media-section-header div {
+  color: var(--main-color);
 }
 
 .media-gallery {
   display: flex;
   flex-direction: column;
-  gap:1.5rem ;
+  gap: 1.5rem;
   justify-content: center;
   align-items: center;
 }
@@ -251,29 +251,50 @@ h1::after {
 }
 
 .media-item h3 {
-  margin-bottom: 0.75rem; 
+  margin-bottom: 0.75rem;
   font-size: 1.5rem;
 }
 
-.media-item img,.media-item video  {
+.media-item img,
+.media-item video {
   width: 100%;
   height: auto;
 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.section-container{
+.section-container,
+.section-container-grid {
   padding: 25px 50px;
   max-width: var(--max-width);
   margin: auto;
 }
 
+.section-container-grid {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 50px;
+}
+
+.section-container-grid > :nth-child(1) h1 {
+  height: fit-content;
+  width: fit-content;
+  padding: 20px 0px;
+}
 
 @media screen and (max-width: 768px) {
   p {
     font-size: 14px;
   }
-  .section-container{
+  .section-container-grid {
+    grid-template-columns: 1fr;
+  }
+  .section-container,
+  .section-container-grid {
     padding: 10px 20px;
   }
+  .section-container-grid > :nth-child(1) h1 {
+    margin: auto;
+  }
+
 }
