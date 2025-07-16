@@ -99,7 +99,7 @@ function App() {
         {navbarHomeElements.map((element, index) => (
           <div
             key={index}
-            className={element.value}
+            className={element.value+" section-container"}
             ref={element.ref}
             data-element={element.value}
           >

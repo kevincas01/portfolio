@@ -262,10 +262,18 @@ h1::after {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.section-container{
+  padding: 25px 50px;
+  max-width: var(--max-width);
+  margin: auto;
+}
 
 
 @media screen and (max-width: 768px) {
   p {
     font-size: 14px;
+  }
+  .section-container{
+    padding: 10px 20px;
   }
 }
