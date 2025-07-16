@@ -82,7 +82,7 @@ a {
   height: 100%;
   appearance: none;
   outline: none;
-  border-radius: 20px;
+
   background-color: white;
   cursor: pointer;
   border: 1px solid var(--main-text-color);
@@ -95,7 +95,7 @@ a {
   position: absolute;
   height: 100%;
   aspect-ratio: 1/1;
-  border-radius: 50%;
+
   background-color: black;
   top: 50%;
   transform: translateY(-50%);
@@ -127,7 +127,7 @@ p {
 button {
   all: unset;
   border: 1px var(--main-color) solid;
-  border-radius: 10px;
+
   padding: 5px;
   cursor: pointer;
 }
@@ -170,7 +170,7 @@ h1::after {
   width: calc(50px); /* Make the underline wider by 50 pixels */
   height: 5px; /* Set the height of the underline */
   background-color: var(--main-color); /* Set the color of the underline */
-  border-radius: 5px;
+
 }
 
 /* Modal Overlay */
@@ -193,7 +193,7 @@ h1::after {
   background-color: var(--contrast-background-color);
   color: var(--main-text-color);
 
-  border-radius: 12px; /* rounded-lg */
+
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
   max-height: 700px;
   max-width: 1200px;
@@ -258,7 +258,7 @@ h1::after {
 .media-item img,.media-item video  {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 

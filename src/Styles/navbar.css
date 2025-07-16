@@ -70,7 +70,7 @@
   position: relative;
   display: flex;
   width: fit-content;
-  border-radius: 9999px;
+
   border: 0.5px solid var(--main-text-color);
   background-color: transparent; 
   padding: 0.25rem;
@@ -99,7 +99,7 @@
   position: absolute;
   z-index: 0;
   height: 2.5rem;
-  border-radius: 9999px;
+
   top: 50%;
   transform: translateY(-50%);
   background-color: var(--secondary-background-color);
