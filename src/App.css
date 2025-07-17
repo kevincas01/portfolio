@@ -13,6 +13,9 @@
 }
 
 .dark-mode {
+  --grid-border-color: rgb(23, 23, 23);
+  --blend-mode: difference;
+  --blend-mode-background: transparent;
   --main-color: rgb(0, 255, 255);
   --main-text-color: #fdfdfd;
   --main-background-color: black;
@@ -29,7 +32,10 @@
 }
 
 .light-mode {
-  --main-color: rgb(0, 123, 158); /* A richer cyan tone for better visibility */
+  --grid-border-color: rgb(237, 237, 237);
+  --blend-mode: hard-light;
+  --blend-mode-background: black;
+  --main-color: #007c9e; /* A richer cyan tone for better visibility */
   --main-text-color: #1a1a1a; /* Darker blackish text for better contrast */
   --main-background-color: #fdfdfd; /* Off-white to reduce glare */
   --secondary-background-color: rgba(0, 124, 158, 0.2);
