@@ -34,8 +34,12 @@ const Contact = () => {
     <>
       <div className="contact-header">
         <h1>CONTACT</h1>
-        <p>If you&rsquo;re working on something exciting and need a developer, have a question about my work, or just want to connect and talk tech (or life), I’d love to hear from you. Don’t hesitate to drop a message!</p>
-
+        <p>
+          If you&rsquo;re working on something exciting and need a developer,
+          have a question about my work, or just want to connect and talk tech
+          (or life), I&rsquo;d love to hear from you. Don&rsquo;t hesitate to
+          drop a message!
+        </p>
       </div>
 
       <form className="contact-form" ref={form} onSubmit={sendEmail}>
@@ -72,9 +76,9 @@ const Contact = () => {
           ></textarea>
         </div>
 
-        <div className="contact-button">
-          <button type="submit">Send Message</button>
-        </div>
+        <button className="contact-button" type="submit">
+          Send Message
+        </button>
       </form>
     </>
   );
