@@ -1,30 +1,40 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../Styles/profile.css";
 import GridSquare from "./GridSquare";
 const Profile = () => {
+  const profileRef = useRef(null);
   const [headerTitle, setHeaderTitle] = useState("");
   const [headerName, setHeaderName] = useState("");
-  const [showHeader, setShowHeader] = useState("");
+  const [showHeader, setShowHeader] = useState(false);
 
   const name = "Kevin Castro";
   const title = "Hello World, I'm";
 
-  const TOTAL_SQUARES = 300;
-  const [fadingIndices, setFadingIndices] = useState([]);
+  const [gridSize, setGridSize] = useState({ rows: 0, cols: 0, squareSize: 0 });
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      // Pick 3 random unique indices to fade
-      const indices = new Set();
-      while (indices.size < 20) {
-        indices.add(Math.floor(Math.random() * TOTAL_SQUARES));
+    const calculateGrid = () => {
+      if (profileRef.current) {
+        const { offsetWidth: width, offsetHeight: height } = profileRef.current;
+
+        const cols = Math.floor(width / 75);
+        const rows = Math.floor(height / 75);
+
+        setGridSize({ cols, rows });
       }
+    };
 
-      setFadingIndices([...indices]);
-    }, 3000); // every 3 seconds
+    calculateGrid();
 
-    return () => clearInterval(interval);
+
+    window.addEventListener("resize", calculateGrid);
+    return () => window.removeEventListener("resize", calculateGrid);
   }, []);
+
+  const squares = Array.from({ length: gridSize.rows * gridSize.cols });
+
+  const [fadingIndices, setFadingIndices] = useState([]);
+
   useEffect(() => {
     let i = 0;
     const intervalId = setInterval(() => {
@@ -41,7 +51,7 @@ const Profile = () => {
 
           if (j > name.length + 5) {
             clearInterval(nameIntervalId);
-            setShowHeader("show");
+            setShowHeader(true);
           }
         }, 75);
       }
@@ -54,18 +64,25 @@ const Profile = () => {
 
   return (
     <div className="profile-container">
-      <div className="profile">
+      <div className="profile" ref={profileRef}>
         <div className="background-grid" aria-hidden="true">
-          {Array.from({ length: 300 }).map((_, i) => (
+          {Array.from({ length: squares.length }).map((_, i) => (
             <GridSquare key={i} shouldFade={fadingIndices.includes(i)} />
           ))}
         </div>
 
         <div className="profile-content">
-          <h3 className="profile-greeting">{headerTitle} </h3>
-          <h1 className="profile-name hover-text">{headerName}</h1>
-          {showHeader && (
-            <div className="hidden-content">
+          <h3 className="profile-greeting">
+            <span className="invisible-placeholder">{title}</span>
+            <span className="animated-overlay">{headerTitle}</span>
+          </h3>
+
+          <h1 className="profile-name">
+            <span className="invisible-placeholder">{name}</span>
+            <span className="animated-overlay">{headerName}</span>
+          </h1>
+
+            <div className={`hidden-content ${showHeader?"show":""}`}>
               <p>Fullstack Software Developer</p>
 
               <div className="profile-buttons">
@@ -79,7 +96,7 @@ const Profile = () => {
                 </button>
               </div>
             </div>
-          )}
+
         </div>
       </div>
     </div>
