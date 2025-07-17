@@ -55,7 +55,12 @@ const Navbar = ({
 
   return (
     <>
-      <div className={scrolled ? "navbar scrolled" : "navbar"} ref={headerRef}>
+      <div
+        className={`navbar ${scrolled ? "scrolled" : ""} ${
+          isNavToggled ? "toggled" : ""
+        }`}
+        ref={headerRef}
+      >
         <div className="nav-name">
           <span
             className={`nav-item ${
@@ -79,65 +84,67 @@ const Navbar = ({
         <div
           className={`nav-tabs-container ${isNavToggled ? "nav-toggled" : ""}`}
         >
-          <div className="nav-tabs">
-            {navbarHomeElements.map((element) => (
-              <span
-                key={element.value}
-                className={`nav-item ${
-                  activeElement === element.value ? "active" : ""
-                }`}
-                onClick={() => {
-                  setIsNavToggled(false);
-                  element.ref.current.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                    inline: "nearest",
-                  });
-                }}
-              >
-                {element.text}
-              </span>
-            ))}
-          </div>
+          <div className="nav-tabs-inner">
+            <div className="nav-tabs">
+              {navbarHomeElements.map((element) => (
+                <span
+                  key={element.value}
+                  className={`nav-item ${
+                    activeElement === element.value ? "active" : ""
+                  }`}
+                  onClick={() => {
+                    setIsNavToggled(false);
+                    element.ref.current.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                      inline: "nearest",
+                    });
+                  }}
+                >
+                  {element.text}
+                </span>
+              ))}
+            </div>
 
-          <SlidingTabSelector
-            onTabSelect={handleTabSelect}
-            tabs={navbarHomeElements}
-            activeTab={activeElement}
-          />
-          <div className="navbar-group">
-            <GitHubIcon
-              sx={{ cursor: "pointer" }}
-              onClick={() =>
-                window.open("https://github.com/kevincas01", "_blank")
-              }
+            <SlidingTabSelector
+              onTabSelect={handleTabSelect}
+              tabs={navbarHomeElements}
+              activeTab={activeElement}
             />
+            <div className="navbar-group">
+              <GitHubIcon
+                sx={{ cursor: "pointer" }}
+                onClick={() =>
+                  window.open("https://github.com/kevincas01", "_blank")
+                }
+              />
 
-            <span className={`switch-mode-container`} onClick={toggleTheme}>
-              <input
-                type="checkbox"
-                name="stepByStepMode"
-                checked={isDarkMode}
-                onChange={toggleTheme}
-                className="settings-checkbox"
-              />
-              <LightModeIcon
-                fontSize="inherit"
-                sx={{
-                  zIndex: 20,
-                  color: "white",
-                  opacity: isDarkMode ? 0.3 : 1,
-                }}
-              />
-              <DarkModeIcon
-                fontSize="inherit"
-                sx={{
-                  zIndex: 20,
-                  color: "black",
-                  opacity: isDarkMode ? 1 : 0.3,
-                }}
-              />
-            </span>
+              <span className={`switch-mode-container`} onClick={toggleTheme}>
+                <input
+                  type="checkbox"
+                  name="stepByStepMode"
+                  checked={isDarkMode}
+                  onChange={toggleTheme}
+                  className="settings-checkbox"
+                />
+                <LightModeIcon
+                  fontSize="inherit"
+                  sx={{
+                    zIndex: 20,
+                    color: "white",
+                    opacity: isDarkMode ? 0.3 : 1,
+                  }}
+                />
+                <DarkModeIcon
+                  fontSize="inherit"
+                  sx={{
+                    zIndex: 20,
+                    color: "black",
+                    opacity: isDarkMode ? 1 : 0.3,
+                  }}
+                />
+              </span>
+            </div>
           </div>
         </div>
       </div>
