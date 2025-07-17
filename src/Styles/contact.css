@@ -1,68 +1,25 @@
-.contact{
-    display: flex;
-    flex-direction: column;
-    gap:20px;
-    width: 50%;
-    margin: auto;
-    padding: 0px 20px;
-    box-sizing: border-box;
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
 }
 
-.contact-header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.contact-input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex-grow: 1;
 }
 
-.contact-header p{
-    font-size: 15px;
-}
-.contact-form{
-    display: flex;
-    flex-direction: column;
-    gap:20px;
-}
-
-
-.contact-input{
-    display: flex;
-    flex-direction: column;
-    gap:5px
-}
-label{
-    width: fit-content;
-    font-weight: bold;
-    color:var(--main-color);
-}
-input, textarea{
-    all:unset;
-
-    border:1px solid rgb(93, 93, 93);
-
-
-    color:white;
-    text-align: left;
-    padding:10px;
-    
-}
-input::placeholder {
-    text-align: left;
-}
-
-textarea{
-    min-height: 150px;
-}
-
-
-form button{
-    width: 50%;
-}
-.contact-button{
-    text-align: center;
+.contact-button {
+ margin-left: auto;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
-    .contact{
-     width: 100%;
-    }
-   }
+  .contact {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
