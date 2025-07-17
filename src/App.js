@@ -112,12 +112,9 @@ function App() {
         ))}
       </div>
 
-      <div
-        onClick={scrollToTop}
-        style={{ textAlign: "center", marginTop: "25px", cursor: "pointer" }}
-      >
-        <KeyboardArrowUpIcon style={{ fontSize: "70px" }} />
-        <p>Back to top</p>
+      <div onClick={scrollToTop} className="back-to-top">
+        <KeyboardArrowUpIcon fontSize="inheir"/>
+        <p className="back-to-top-text">Back to top</p>
       </div>
     </div>
   );
