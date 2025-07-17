@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 
-const GridSquare = () => {
+const GridSquare = ({shouldFade}) => {
   const [faded, setFaded] = useState(false);
   const squareRef = useRef(null);
 
@@ -22,7 +22,7 @@ const GridSquare = () => {
   return (
     <div
       ref={squareRef}
-      className={faded ? "fade-out" : ""}
+      className={faded ||shouldFade ? "fade-out" : ""}
       onMouseEnter={triggerAnimation}
     />
   );
