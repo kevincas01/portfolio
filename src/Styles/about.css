@@ -1,54 +1,121 @@
-.about {
-  
-  padding: 20px 20px;
-  max-width: var(--max-width);
-  margin: auto;
-}
-.about-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .about-info {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  height: fit-content;
+}
+
+#about-photo {
+  width: 100%;
+  max-width: 250px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: bottom;
+
+}
+
+.about-text {
+  position: absolute;
+  width: 80%;
+  padding: 20px 0px 0px 20px;
+  margin: auto;
+  top: 75%;
+  left: 20%;
+  background-color: var(--main-background-color);
+  box-sizing: border-box;
+  font-size: 0.85rem;
+}
+
+.education-section h2,
+.skills-section h2 {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.edu-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 500;
+}
+
+.edu-details h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0 0 4px 0;
+  letter-spacing: 1px;
+}
+
+.edu-degree,
+.edu-year {
+  font-size: 0.9rem;
+  color: var(--main-color);
+}
+.edu-courses {
+  margin-top: 10px;
+}
+.edu-courses ul {
   display: grid;
-  min-width: 0;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 8px 20px;
+  padding-left: 0;
+  list-style: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.edu-courses li::before {
+  content: "-";
+  color: var(--main-color);
+  margin-right: 6px;
+}
 
-  grid-gap: 5rem;
-}
-.about-info-text{
-  min-width: 0;    
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.about-info-skills {
-  min-width:0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .skills {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
   margin-bottom: 10px;
-  max-width: 400px;
-}
-
-.skill {
-  color: var(--main-color);
-  background-color: var(--secondary-background-color);
-
-  padding: 5px 10px;
 }
 
 @media screen and (max-width: 768px) {
+  .about-header {
+    text-align: center;
+    margin: auto;
+  }
+
   .about-info {
-    grid-template-columns: 1fr; /* Change to single column layout */
-    grid-gap: 2rem;
+    gap:25px
+  }
+
+  .image-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .about-text {
+    position: relative;
+    left: 0;
+    top: 0;
+    padding-top: 0px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .image-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-text {
+    padding-left: 0;
+    width: 100%;
+    padding-top: 20px;
+  }
+  #about-photo {
+    margin: auto;
   }
 }
