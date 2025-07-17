@@ -1,13 +1,31 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../Styles/profile.css";
+import GridSquare from "./GridSquare";
 const Profile = () => {
-  const [headerTitle, setHeaderTitle] = React.useState("");
-  const [headerName, setHeaderName] = React.useState("");
-  const [showHeader, setShowHeader] = React.useState("");
+  const [headerTitle, setHeaderTitle] = useState("");
+  const [headerName, setHeaderName] = useState("");
+  const [showHeader, setShowHeader] = useState("");
 
   const name = "Kevin Castro";
   const title = "Hello World, I'm";
-  React.useEffect(() => {
+
+  const TOTAL_SQUARES = 300;
+  const [fadingIndices, setFadingIndices] = useState([]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Pick 3 random unique indices to fade
+      const indices = new Set();
+      while (indices.size < 20) {
+        indices.add(Math.floor(Math.random() * TOTAL_SQUARES));
+      }
+
+      setFadingIndices([...indices]);
+    }, 3000); // every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+  useEffect(() => {
     let i = 0;
     const intervalId = setInterval(() => {
       setHeaderTitle(title.substring(0, i));
@@ -34,71 +52,18 @@ const Profile = () => {
     };
   }, [title, name]);
 
-  useEffect(() => {
-    if (headerName !== name) return;
-    const spans = document.querySelectorAll(".hover-text span");
-    spans.forEach((span) => {
-      span.addEventListener("mouseenter", function () {
-        this.style.fontWeight = "700";
-        this.style.color = "var(--main-text-color)";
-
-        const leftNeighbor = this.previousElementSibling;
-        const rightNeighbor = this.nextElementSibling;
-
-        if (leftNeighbor) {
-          leftNeighbor.style.fontWeight = "500";
-          leftNeighbor.style.color = "var(--main-gradient-secondary-color)";
-        }
-        if (rightNeighbor) {
-          rightNeighbor.style.fontWeight = "500";
-          rightNeighbor.style.color = "var(--main-gradient-secondary-color)";
-        }
-      });
-
-      span.addEventListener("mouseleave", function () {
-        this.style.fontWeight = "300";
-        this.style.color = "var(--main-color)";
-
-        const leftNeighbor = this.previousElementSibling;
-        const rightNeighbor = this.nextElementSibling;
-
-        if (leftNeighbor) {
-          leftNeighbor.style.fontWeight = "300";
-          leftNeighbor.style.color = "var(--main-color)";
-        }
-
-        if (rightNeighbor) {
-          rightNeighbor.style.fontWeight = "300";
-          rightNeighbor.style.color = "var(--main-color)";
-        }
-      });
-    });
-  }, [headerName]);
-
   return (
     <div className="profile-container">
       <div className="profile">
-        <div >
-          <img
-            src="/images/KevinC.jpeg"
-            alt="Kevin Castro Headshot"
-            id="profile-photo"
-          ></img>
+        <div className="background-grid" aria-hidden="true">
+          {Array.from({ length: 300 }).map((_, i) => (
+            <GridSquare key={i} shouldFade={fadingIndices.includes(i)} />
+          ))}
         </div>
+
         <div className="profile-content">
           <h3 className="profile-greeting">{headerTitle} </h3>
-          <h1 className="profile-name hover-text">
-            {headerName.split("").map((child, idx) => (
-              <span
-                style={{
-                  transition: "0.35s font-weight, 0.35s color",
-                }}
-                key={idx}
-              >
-                {child}
-              </span>
-            ))}
-          </h1>
+          <h1 className="profile-name hover-text">{headerName}</h1>
           {showHeader && (
             <div className="hidden-content">
               <p>Fullstack Software Developer</p>
