@@ -26,12 +26,11 @@ const Profile = () => {
 
     calculateGrid();
 
-
     window.addEventListener("resize", calculateGrid);
     return () => window.removeEventListener("resize", calculateGrid);
   }, []);
 
-  const squares = Array.from({ length: gridSize.rows * gridSize.cols });
+  const squaresLength = gridSize.rows * gridSize.cols;
 
   const [fadingIndices, setFadingIndices] = useState([]);
 
@@ -62,11 +61,57 @@ const Profile = () => {
     };
   }, [title, name]);
 
+  const calculateInitialsIndices = () => {
+    const min = Math.floor(squaresLength * 0.25);
+    const max = Math.floor(squaresLength * 0.75);
+    let kMidPoint = Math.floor(Math.random() * (max - min) + min);
+    const remainder = kMidPoint % gridSize.cols;
+
+    if (remainder + 5 >= gridSize.cols) {
+      kMidPoint = kMidPoint - 5;
+    }
+
+    const indices = [];
+
+    // Make line for K
+    indices.push(kMidPoint);
+    for (let i = 0; i < 2; i++) {
+      if (kMidPoint - (i + 1) * gridSize.cols >= 0) {
+        indices.push(kMidPoint - (i + 1) * gridSize.cols);
+      }
+      if (kMidPoint + (i + 1) * gridSize.cols <= squaresLength) {
+        indices.push(kMidPoint + (i + 1) * gridSize.cols);
+      }
+    }
+    //Make diagonals from k midpoint
+    indices.push(kMidPoint + 1);
+    for (let i = 0; i < 2; i++) {
+      if (kMidPoint + 1 - (i + 1) * gridSize.cols + (i + 1) >= 0) {
+        indices.push(kMidPoint + 1 - (i + 1) * gridSize.cols + (i + 1));
+      }
+      if (kMidPoint + 1 + (i + 1) * gridSize.cols + (i + 1) <= squaresLength) {
+        indices.push(kMidPoint + 1 + (i + 1) * gridSize.cols + (i + 1));
+      }
+    }
+
+    console.log(indices);
+    setFadingIndices(indices);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Pick 3 random unique indices to fade
+      calculateInitialsIndices();
+    }, 5000); // every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [gridSize]);
+
   return (
     <div className="profile-container">
       <div className="profile" ref={profileRef}>
         <div className="background-grid" aria-hidden="true">
-          {Array.from({ length: squares.length }).map((_, i) => (
+          {Array.from({ length: squaresLength }).map((_, i) => (
             <GridSquare key={i} shouldFade={fadingIndices.includes(i)} />
           ))}
         </div>
@@ -82,21 +127,20 @@ const Profile = () => {
             <span className="animated-overlay">{headerName}</span>
           </h1>
 
-            <div className={`hidden-content ${showHeader?"show":""}`}>
-              <p>Fullstack Software Developer</p>
+          <div className={`hidden-content ${showHeader ? "show" : ""}`}>
+            <p>Fullstack Software Developer</p>
 
-              <div className="profile-buttons">
-                <button
-                  className="profile-button"
-                  onClick={() =>
-                    window.open("/resume.pdf", "_blank", "noopener,noreferrer")
-                  }
-                >
-                  View Resume
-                </button>
-              </div>
+            <div className="profile-buttons">
+              <button
+                className="profile-button"
+                onClick={() =>
+                  window.open("/resume.pdf", "_blank", "noopener,noreferrer")
+                }
+              >
+                View Resume
+              </button>
             </div>
-
+          </div>
         </div>
       </div>
     </div>
