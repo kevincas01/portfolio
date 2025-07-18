@@ -40,7 +40,7 @@ export default function ExperienceElement({
   }, []);
 
   useEffect(() => {
-    const newHeight = 100 * intersectionRatio * 5;
+    const newHeight = 100 * intersectionRatio * 8;
     setHeight(newHeight);
   }, [intersectionRatio]);
 
