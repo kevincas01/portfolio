@@ -109,6 +109,9 @@
     display: flex;
     flex-direction: column;
   }
+  .about-info{
+    margin: 0px;
+  }
 
   .about-text {
     padding-left: 0;
