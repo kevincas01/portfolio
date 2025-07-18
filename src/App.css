@@ -3,7 +3,7 @@
 :root {
   overscroll-behavior: none;
   --hover-background-color: rgba(60, 72, 96, 0.179);
-  --navbar-height: 70px;
+  --navbar-height: 80px;
   --max-width: 1200px;
 }
 
