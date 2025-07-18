@@ -70,6 +70,7 @@ const Experience = () => {
       <div className="experiences-container">
         {experienceList.map((experience, index) => (
           <ExperienceElement
+            key={index}
             stepNumber={experience.stepNumber}
             role={experience.role}
             company={experience.company}
