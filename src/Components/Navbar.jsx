@@ -62,13 +62,9 @@ const Navbar = ({
         ref={headerRef}
       >
         <div className="nav-name">
-          <span
-            className={`nav-item ${
-              activeElement === "profile" ? "active" : ""
-            }`}
-            style={{ fontWeight: "bold" }}
-          >
-            Kevin C
+          <span className="nav-name">
+            <span className="k-letter special-word">K</span>
+            <span className="c-letter">C</span>
           </span>
         </div>
         <div
