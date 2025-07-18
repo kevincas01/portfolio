@@ -17,6 +17,7 @@
   gap: 25px;
   padding: 50px 0px;
   align-items: center;
+  height: 1600px;
 }
 .experience-skills {
   display: flex;
@@ -111,6 +112,7 @@
 
   .experiences-container {
     padding: 0;
+    height: 2000px;
   }
   .experience-content {
     padding: 0;
