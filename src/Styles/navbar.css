@@ -27,7 +27,24 @@
   font-size: 1.5rem;
 }
 .nav-name {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  display: inline-block;
+  font-family: "Orbitron", sans-serif;
+}
+
+.k-letter,
+.c-letter {
+  display: inline-block;
+  position: relative;
+}
+
+.k-letter {
+  top: -5px;
+}
+
+.c-letter {
+  top: 5px;
 }
 
 .nav-tabs {
@@ -110,12 +127,12 @@
   .navbar {
     position: sticky;
     z-index: 50;
-    transition: 0.3s all ease-in-out .5s;
+    transition: 0.3s all ease-in-out 0.5s;
   }
 
   .navbar.toggled {
     background-color: var(--main-background-color);
-    transition: 0.3s all ease-in-out ;
+    transition: 0.3s all ease-in-out;
   }
   .menu {
     position: absolute;
@@ -150,7 +167,6 @@
     top: calc(var(--navbar-height));
     background-color: var(--main-background-color);
     box-sizing: content-box;
-    
 
     box-shadow: var(--box-shadow-lg);
 
@@ -158,7 +174,7 @@
 
     font-size: 1.5rem;
     gap: 1rem;
-    transition: 0.5s all ease-in-out ;
+    transition: 0.5s all ease-in-out;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
@@ -169,8 +185,7 @@
   }
 
   .nav-toggled {
-
-    transition: 0.5s all ease-in-out .2s;
+    transition: 0.5s all ease-in-out 0.2s;
     max-height: 500px;
     color: var(--main-text-color);
   }
