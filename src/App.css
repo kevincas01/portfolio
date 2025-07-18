@@ -146,6 +146,8 @@ button:hover {
 
 .back-to-top {
   display: flex;
+  width: fit-content;
+  margin: auto;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -154,6 +156,7 @@ button:hover {
   color: var(--main-color);
   transition: transform 0.3s ease, color 0.3s ease;
   font-size: 50px;
+  transform-origin: bottom;
 }
 
 .back-to-top:hover {
